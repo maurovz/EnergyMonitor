@@ -1,0 +1,21 @@
+name: test-actions
+on: 
+  push: 
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+    - main
+    - develop
+jobs:
+  test:
+    name: EnergyMonitor Test
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Force XCode 13
+        run: sudo xcode-select -switch /Applications/Xcode_13.2.app
+      - name: Testing iOS app
+        run: xcodebuild test -project EnergyMonitor.xcodeproj -scheme EnergyMonitorTests -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.2"
