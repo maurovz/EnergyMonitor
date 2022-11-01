@@ -12,19 +12,10 @@
 		54767BBB29117585002F48E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54767BBA29117585002F48E0 /* Assets.xcassets */; };
 		54767BBE29117585002F48E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54767BBD29117585002F48E0 /* Preview Assets.xcassets */; };
 		54767BC829117586002F48E0 /* EnergyMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767BC729117586002F48E0 /* EnergyMonitorTests.swift */; };
-		54767BD229117586002F48E0 /* EnergyMonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767BD129117586002F48E0 /* EnergyMonitorUITests.swift */; };
-		54767BD429117586002F48E0 /* EnergyMonitorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767BD329117586002F48E0 /* EnergyMonitorUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		54767BC429117586002F48E0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 54767BAB29117584002F48E0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 54767BB229117584002F48E0;
-			remoteInfo = EnergyMonitor;
-		};
-		54767BCE29117586002F48E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 54767BAB29117584002F48E0 /* Project object */;
 			proxyType = 1;
@@ -41,9 +32,6 @@
 		54767BBD29117585002F48E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54767BC329117586002F48E0 /* EnergyMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54767BC729117586002F48E0 /* EnergyMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyMonitorTests.swift; sourceTree = "<group>"; };
-		54767BCD29117586002F48E0 /* EnergyMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		54767BD129117586002F48E0 /* EnergyMonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyMonitorUITests.swift; sourceTree = "<group>"; };
-		54767BD329117586002F48E0 /* EnergyMonitorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyMonitorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +49,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54767BCA29117586002F48E0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +57,6 @@
 			children = (
 				54767BB529117584002F48E0 /* EnergyMonitor */,
 				54767BC629117586002F48E0 /* EnergyMonitorTests */,
-				54767BD029117586002F48E0 /* EnergyMonitorUITests */,
 				54767BB429117584002F48E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +66,6 @@
 			children = (
 				54767BB329117584002F48E0 /* EnergyMonitor.app */,
 				54767BC329117586002F48E0 /* EnergyMonitorTests.xctest */,
-				54767BCD29117586002F48E0 /* EnergyMonitorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,15 +95,6 @@
 				54767BC729117586002F48E0 /* EnergyMonitorTests.swift */,
 			);
 			path = EnergyMonitorTests;
-			sourceTree = "<group>";
-		};
-		54767BD029117586002F48E0 /* EnergyMonitorUITests */ = {
-			isa = PBXGroup;
-			children = (
-				54767BD129117586002F48E0 /* EnergyMonitorUITests.swift */,
-				54767BD329117586002F48E0 /* EnergyMonitorUITestsLaunchTests.swift */,
-			);
-			path = EnergyMonitorUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,24 +136,6 @@
 			productReference = 54767BC329117586002F48E0 /* EnergyMonitorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		54767BCC29117586002F48E0 /* EnergyMonitorUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 54767BDD29117586002F48E0 /* Build configuration list for PBXNativeTarget "EnergyMonitorUITests" */;
-			buildPhases = (
-				54767BC929117586002F48E0 /* Sources */,
-				54767BCA29117586002F48E0 /* Frameworks */,
-				54767BCB29117586002F48E0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				54767BCF29117586002F48E0 /* PBXTargetDependency */,
-			);
-			name = EnergyMonitorUITests;
-			productName = EnergyMonitorUITests;
-			productReference = 54767BCD29117586002F48E0 /* EnergyMonitorUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,10 +150,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					54767BC229117586002F48E0 = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 54767BB229117584002F48E0;
-					};
-					54767BCC29117586002F48E0 = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 54767BB229117584002F48E0;
 					};
@@ -222,7 +170,6 @@
 			targets = (
 				54767BB229117584002F48E0 /* EnergyMonitor */,
 				54767BC229117586002F48E0 /* EnergyMonitorTests */,
-				54767BCC29117586002F48E0 /* EnergyMonitorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,13 +185,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		54767BC129117586002F48E0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54767BCB29117586002F48E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,15 +232,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54767BC929117586002F48E0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				54767BD229117586002F48E0 /* EnergyMonitorUITests.swift in Sources */,
-				54767BD429117586002F48E0 /* EnergyMonitorUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -308,11 +239,6 @@
 			isa = PBXTargetDependency;
 			target = 54767BB229117584002F48E0 /* EnergyMonitor */;
 			targetProxy = 54767BC429117586002F48E0 /* PBXContainerItemProxy */;
-		};
-		54767BCF29117586002F48E0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 54767BB229117584002F48E0 /* EnergyMonitor */;
-			targetProxy = 54767BCE29117586002F48E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -527,40 +453,6 @@
 			};
 			name = Release;
 		};
-		54767BDE29117586002F48E0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = band.wrist.EnergyMonitorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EnergyMonitor;
-			};
-			name = Debug;
-		};
-		54767BDF29117586002F48E0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = band.wrist.EnergyMonitorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EnergyMonitor;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -587,15 +479,6 @@
 			buildConfigurations = (
 				54767BDB29117586002F48E0 /* Debug */,
 				54767BDC29117586002F48E0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		54767BDD29117586002F48E0 /* Build configuration list for PBXNativeTarget "EnergyMonitorUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				54767BDE29117586002F48E0 /* Debug */,
-				54767BDF29117586002F48E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
