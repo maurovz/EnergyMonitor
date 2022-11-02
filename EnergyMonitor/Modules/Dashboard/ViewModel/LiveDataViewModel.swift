@@ -53,8 +53,7 @@ public final class LiveDataViewModel: Identifiable, ObservableObject {
       case .success(let data):
         self.liveData = data
 
-      case .failure(let error):
-//        self.delegate?.showError(message: error.localizedDescription)
+      case .failure:
         completion(false)
       }
     }

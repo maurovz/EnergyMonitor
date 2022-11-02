@@ -3,16 +3,16 @@ import EnergyDataFeature
 import Combine
 
 final class DashboardViewModel: ObservableObject {
-  private let historyLoader: HistoryLoader
-
-  var delegate: DashboardProtocol?
-
   @Published var liveDataViewModel: LiveDataViewModel
+  @Published var historicDataViewModel: HistoricDataViewModel
 
-  public init(
-    historyLoader: HistoryLoader,
-    liveDataViewModel: LiveDataViewModel) {
-      self.historyLoader = historyLoader
-      self.liveDataViewModel = liveDataViewModel
-    }
+  init(historicDataViewModel: HistoricDataViewModel, liveDataViewModel: LiveDataViewModel) {
+    self.historicDataViewModel = historicDataViewModel
+    self.liveDataViewModel = liveDataViewModel
+  }
+
+  func fetchData() {
+    liveDataViewModel.fetch { _ in }
+    historicDataViewModel.fetch { _ in }
+  }
 }
