@@ -23,6 +23,7 @@
 		54767C322912834F002F48E0 /* LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C312912834F002F48E0 /* LiveData.swift */; };
 		54767C3429128365002F48E0 /* HistoryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C3329128365002F48E0 /* HistoryLoader.swift */; };
 		54767C3629128370002F48E0 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C3529128370002F48E0 /* History.swift */; };
+		54767C3A29128B6C002F48E0 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54767C3C29128B6C002F48E0 /* Localized.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,9 @@
 		54767C312912834F002F48E0 /* LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
 		54767C3329128365002F48E0 /* HistoryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryLoader.swift; sourceTree = "<group>"; };
 		54767C3529128370002F48E0 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		54767C3B29128B6C002F48E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
+		54767C3D29128BAB002F48E0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localized.strings; sourceTree = "<group>"; };
+		54767C3E29128BB3002F48E0 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localized.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		54767BB529117584002F48E0 /* EnergyMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				54767C3729128AFC002F48E0 /* Resources */,
 				54767C212912778B002F48E0 /* Modules */,
 				54767BB629117584002F48E0 /* EnergyMonitorApp.swift */,
 				54767BB829117584002F48E0 /* ContentView.swift */,
@@ -276,6 +281,14 @@
 			path = "Live Data API";
 			sourceTree = "<group>";
 		};
+		54767C3729128AFC002F48E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54767C3C29128B6C002F48E0 /* Localized.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -397,6 +410,8 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				ca,
 			);
 			mainGroup = 54767BAA29117584002F48E0;
 			productRefGroup = 54767BB429117584002F48E0 /* Products */;
@@ -416,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54767C3A29128B6C002F48E0 /* Localized.strings in Resources */,
 				54767BBE29117585002F48E0 /* Preview Assets.xcassets in Resources */,
 				54767BBB29117585002F48E0 /* Assets.xcassets in Resources */,
 			);
@@ -524,11 +540,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		54767C3C29128B6C002F48E0 /* Localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54767C3B29128B6C002F48E0 /* en */,
+				54767C3D29128BAB002F48E0 /* es */,
+				54767C3E29128BB3002F48E0 /* ca */,
+			);
+			name = Localized.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		54767BD529117586002F48E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -590,6 +620,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
