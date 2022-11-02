@@ -30,6 +30,7 @@
 		54767C562912F8E3002F48E0 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C552912F8E3002F48E0 /* DashboardViewModel.swift */; };
 		54767C582912F9E4002F48E0 /* LiveDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */; };
 		54767C5A2912FA36002F48E0 /* HistoricDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */; };
+		54767C5C2912FC47002F48E0 /* DashboardComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C5B2912FC47002F48E0 /* DashboardComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		54767C552912F8E3002F48E0 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataViewModel.swift; sourceTree = "<group>"; };
 		54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricDataViewModel.swift; sourceTree = "<group>"; };
+		54767C5B2912FC47002F48E0 /* DashboardComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				54767C552912F8E3002F48E0 /* DashboardViewModel.swift */,
 				54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */,
 				54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */,
+				54767C5B2912FC47002F48E0 /* DashboardComposer.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54767C5C2912FC47002F48E0 /* DashboardComposer.swift in Sources */,
 				54767C4429128C75002F48E0 /* LocalizedConstants.swift in Sources */,
 				54767C5A2912FA36002F48E0 /* HistoricDataViewModel.swift in Sources */,
 				54767C582912F9E4002F48E0 /* LiveDataViewModel.swift in Sources */,
