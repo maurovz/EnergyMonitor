@@ -226,6 +226,8 @@
 		54767C2629127A5C002F48E0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				54767C2E29127F3B002F48E0 /* Live Data API */,
+				54767C2D29127F2B002F48E0 /* Historic Data API */,
 				54767C2A29127B6F002F48E0 /* Shared API Infra */,
 				54767C2729127B1C002F48E0 /* Shared API */,
 			);
@@ -246,6 +248,20 @@
 				54767C2B29127BA7002F48E0 /* URLSessionHTTPClient.swift */,
 			);
 			path = "Shared API Infra";
+			sourceTree = "<group>";
+		};
+		54767C2D29127F2B002F48E0 /* Historic Data API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Historic Data API";
+			sourceTree = "<group>";
+		};
+		54767C2E29127F3B002F48E0 /* Live Data API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Live Data API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
