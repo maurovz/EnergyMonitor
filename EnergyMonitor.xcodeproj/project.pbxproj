@@ -135,6 +135,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5449DFD32912FED200F706B0 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				54767C5B2912FC47002F48E0 /* DashboardComposer.swift */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
+		5449DFD52912FEE200F706B0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				54767C552912F8E3002F48E0 /* DashboardViewModel.swift */,
+				54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */,
+				54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5449DFD62912FEF300F706B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54767C4529128D36002F48E0 /* DashboardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		54767BAA29117584002F48E0 = {
 			isa = PBXGroup;
 			children = (
@@ -225,11 +251,9 @@
 		54767C2229127790002F48E0 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				54767C4529128D36002F48E0 /* DashboardView.swift */,
-				54767C552912F8E3002F48E0 /* DashboardViewModel.swift */,
-				54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */,
-				54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */,
-				54767C5B2912FC47002F48E0 /* DashboardComposer.swift */,
+				5449DFD62912FEF300F706B0 /* View */,
+				5449DFD52912FEE200F706B0 /* ViewModel */,
+				5449DFD32912FED200F706B0 /* Composer */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
