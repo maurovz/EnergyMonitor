@@ -27,6 +27,7 @@
 		54767C4229128C39002F48E0 /* Localization+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4129128C39002F48E0 /* Localization+Extension.swift */; };
 		54767C4429128C75002F48E0 /* LocalizedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4329128C75002F48E0 /* LocalizedConstants.swift */; };
 		54767C4629128D36002F48E0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4529128D36002F48E0 /* DashboardView.swift */; };
+		54767C4A2912A951002F48E0 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C492912A951002F48E0 /* DashboardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		54767C4129128C39002F48E0 /* Localization+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localization+Extension.swift"; sourceTree = "<group>"; };
 		54767C4329128C75002F48E0 /* LocalizedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedConstants.swift; sourceTree = "<group>"; };
 		54767C4529128D36002F48E0 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		54767C492912A951002F48E0 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,7 +219,8 @@
 		54767C2229127790002F48E0 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				54767C4529128D36002F48E0 /* DashboardView.swift */,
+				54767C482912A920002F48E0 /* View */,
+				54767C472912A91A002F48E0 /* ViewModel */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -312,6 +315,22 @@
 				54767C4129128C39002F48E0 /* Localization+Extension.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		54767C472912A91A002F48E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				54767C492912A951002F48E0 /* DashboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		54767C482912A920002F48E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54767C4529128D36002F48E0 /* DashboardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,6 +533,7 @@
 				54767C4429128C75002F48E0 /* LocalizedConstants.swift in Sources */,
 				54767C4229128C39002F48E0 /* Localization+Extension.swift in Sources */,
 				54767C4629128D36002F48E0 /* DashboardView.swift in Sources */,
+				54767C4A2912A951002F48E0 /* DashboardViewModel.swift in Sources */,
 				54767BB929117584002F48E0 /* ContentView.swift in Sources */,
 				54767BB729117584002F48E0 /* EnergyMonitorApp.swift in Sources */,
 			);
