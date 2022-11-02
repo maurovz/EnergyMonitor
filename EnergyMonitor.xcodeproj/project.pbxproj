@@ -23,6 +23,14 @@
 		54767C322912834F002F48E0 /* LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C312912834F002F48E0 /* LiveData.swift */; };
 		54767C3429128365002F48E0 /* HistoryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C3329128365002F48E0 /* HistoryLoader.swift */; };
 		54767C3629128370002F48E0 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C3529128370002F48E0 /* History.swift */; };
+		54767C3A29128B6C002F48E0 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54767C3C29128B6C002F48E0 /* Localized.strings */; };
+		54767C4229128C39002F48E0 /* Localization+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4129128C39002F48E0 /* Localization+Extension.swift */; };
+		54767C4429128C75002F48E0 /* LocalizedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4329128C75002F48E0 /* LocalizedConstants.swift */; };
+		54767C4629128D36002F48E0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4529128D36002F48E0 /* DashboardView.swift */; };
+		54767C562912F8E3002F48E0 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C552912F8E3002F48E0 /* DashboardViewModel.swift */; };
+		54767C582912F9E4002F48E0 /* LiveDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */; };
+		54767C5A2912FA36002F48E0 /* HistoricDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */; };
+		54767C5C2912FC47002F48E0 /* DashboardComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C5B2912FC47002F48E0 /* DashboardComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +89,16 @@
 		54767C312912834F002F48E0 /* LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
 		54767C3329128365002F48E0 /* HistoryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryLoader.swift; sourceTree = "<group>"; };
 		54767C3529128370002F48E0 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		54767C3B29128B6C002F48E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
+		54767C3D29128BAB002F48E0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localized.strings; sourceTree = "<group>"; };
+		54767C3E29128BB3002F48E0 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localized.strings; sourceTree = "<group>"; };
+		54767C4129128C39002F48E0 /* Localization+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localization+Extension.swift"; sourceTree = "<group>"; };
+		54767C4329128C75002F48E0 /* LocalizedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedConstants.swift; sourceTree = "<group>"; };
+		54767C4529128D36002F48E0 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		54767C552912F8E3002F48E0 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataViewModel.swift; sourceTree = "<group>"; };
+		54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricDataViewModel.swift; sourceTree = "<group>"; };
+		54767C5B2912FC47002F48E0 /* DashboardComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +135,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5449DFD32912FED200F706B0 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				54767C5B2912FC47002F48E0 /* DashboardComposer.swift */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
+		5449DFD52912FEE200F706B0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				54767C552912F8E3002F48E0 /* DashboardViewModel.swift */,
+				54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */,
+				54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5449DFD62912FEF300F706B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54767C4529128D36002F48E0 /* DashboardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		54767BAA29117584002F48E0 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +187,7 @@
 		54767BB529117584002F48E0 /* EnergyMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				54767C3729128AFC002F48E0 /* Resources */,
 				54767C212912778B002F48E0 /* Modules */,
 				54767BB629117584002F48E0 /* EnergyMonitorApp.swift */,
 				54767BB829117584002F48E0 /* ContentView.swift */,
@@ -206,6 +251,9 @@
 		54767C2229127790002F48E0 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				5449DFD62912FEF300F706B0 /* View */,
+				5449DFD52912FEE200F706B0 /* ViewModel */,
+				5449DFD32912FED200F706B0 /* Composer */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -274,6 +322,32 @@
 			children = (
 			);
 			path = "Live Data API";
+			sourceTree = "<group>";
+		};
+		54767C3729128AFC002F48E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54767C3F29128C0F002F48E0 /* Localization */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		54767C3F29128C0F002F48E0 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				54767C4029128C24002F48E0 /* Helper */,
+				54767C3C29128B6C002F48E0 /* Localized.strings */,
+				54767C4329128C75002F48E0 /* LocalizedConstants.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		54767C4029128C24002F48E0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				54767C4129128C39002F48E0 /* Localization+Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +471,8 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				ca,
 			);
 			mainGroup = 54767BAA29117584002F48E0;
 			productRefGroup = 54767BB429117584002F48E0 /* Products */;
@@ -416,6 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54767C3A29128B6C002F48E0 /* Localized.strings in Resources */,
 				54767BBE29117585002F48E0 /* Preview Assets.xcassets in Resources */,
 				54767BBB29117585002F48E0 /* Assets.xcassets in Resources */,
 			);
@@ -470,6 +547,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54767C5C2912FC47002F48E0 /* DashboardComposer.swift in Sources */,
+				54767C4429128C75002F48E0 /* LocalizedConstants.swift in Sources */,
+				54767C5A2912FA36002F48E0 /* HistoricDataViewModel.swift in Sources */,
+				54767C582912F9E4002F48E0 /* LiveDataViewModel.swift in Sources */,
+				54767C4229128C39002F48E0 /* Localization+Extension.swift in Sources */,
+				54767C4629128D36002F48E0 /* DashboardView.swift in Sources */,
+				54767C562912F8E3002F48E0 /* DashboardViewModel.swift in Sources */,
 				54767BB929117584002F48E0 /* ContentView.swift in Sources */,
 				54767BB729117584002F48E0 /* EnergyMonitorApp.swift in Sources */,
 			);
@@ -524,11 +608,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		54767C3C29128B6C002F48E0 /* Localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54767C3B29128B6C002F48E0 /* en */,
+				54767C3D29128BAB002F48E0 /* es */,
+				54767C3E29128BB3002F48E0 /* ca */,
+			);
+			name = Localized.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		54767BD529117586002F48E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -590,6 +688,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

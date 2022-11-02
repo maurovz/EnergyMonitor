@@ -6,7 +6,7 @@ public struct LiveData {
   public let systemSoc: Decimal
   public let totalEnergy: Decimal
   public let currentEnergy: Decimal
-  
+
   public init(
     solarPower: Decimal,
     quasarPower: Decimal,
