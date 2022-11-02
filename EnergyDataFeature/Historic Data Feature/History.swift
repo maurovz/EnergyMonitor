@@ -4,7 +4,7 @@ public struct History {
   public let pvPower: Decimal
   public let quasarsPower: Decimal
   public let timeStamp: Date
-  
+
   public init(
     buildingPower: Decimal,
     gridPower: Decimal,
@@ -16,5 +16,5 @@ public struct History {
       self.pvPower = pvPower
       self.quasarsPower = quasarsPower
       self.timeStamp = timeStamp
-  }
+    }
 }
