@@ -5,4 +5,3 @@ public protocol LiveDataLoader {
 
   func load(completion: @escaping (Result) -> Void)
 }
-
