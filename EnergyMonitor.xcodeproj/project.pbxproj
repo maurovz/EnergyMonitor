@@ -131,6 +131,7 @@
 		54767BB529117584002F48E0 /* EnergyMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				54767C212912778B002F48E0 /* Modules */,
 				54767BB629117584002F48E0 /* EnergyMonitorApp.swift */,
 				54767BB829117584002F48E0 /* ContentView.swift */,
 				54767BBA29117585002F48E0 /* Assets.xcassets */,
@@ -176,6 +177,29 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54767C212912778B002F48E0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				54767C2229127790002F48E0 /* Dashboard */,
+				54767C2329127796002F48E0 /* DetailGraph */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		54767C2229127790002F48E0 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		54767C2329127796002F48E0 /* DetailGraph */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailGraph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
