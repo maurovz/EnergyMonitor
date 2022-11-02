@@ -24,6 +24,8 @@
 		54767C3429128365002F48E0 /* HistoryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C3329128365002F48E0 /* HistoryLoader.swift */; };
 		54767C3629128370002F48E0 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C3529128370002F48E0 /* History.swift */; };
 		54767C3A29128B6C002F48E0 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54767C3C29128B6C002F48E0 /* Localized.strings */; };
+		54767C4229128C39002F48E0 /* Localization+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4129128C39002F48E0 /* Localization+Extension.swift */; };
+		54767C4429128C75002F48E0 /* LocalizedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4329128C75002F48E0 /* LocalizedConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		54767C3B29128B6C002F48E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		54767C3D29128BAB002F48E0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localized.strings; sourceTree = "<group>"; };
 		54767C3E29128BB3002F48E0 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localized.strings; sourceTree = "<group>"; };
+		54767C4129128C39002F48E0 /* Localization+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localization+Extension.swift"; sourceTree = "<group>"; };
+		54767C4329128C75002F48E0 /* LocalizedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,9 +288,27 @@
 		54767C3729128AFC002F48E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				54767C3C29128B6C002F48E0 /* Localized.strings */,
+				54767C3F29128C0F002F48E0 /* Localization */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		54767C3F29128C0F002F48E0 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				54767C4029128C24002F48E0 /* Helper */,
+				54767C3C29128B6C002F48E0 /* Localized.strings */,
+				54767C4329128C75002F48E0 /* LocalizedConstants.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		54767C4029128C24002F48E0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				54767C4129128C39002F48E0 /* Localization+Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +508,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54767C4429128C75002F48E0 /* LocalizedConstants.swift in Sources */,
+				54767C4229128C39002F48E0 /* Localization+Extension.swift in Sources */,
 				54767BB929117584002F48E0 /* ContentView.swift in Sources */,
 				54767BB729117584002F48E0 /* EnergyMonitorApp.swift in Sources */,
 			);
