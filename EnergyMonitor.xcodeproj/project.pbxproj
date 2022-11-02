@@ -12,6 +12,17 @@
 		54767BBB29117585002F48E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54767BBA29117585002F48E0 /* Assets.xcassets */; };
 		54767BBE29117585002F48E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54767BBD29117585002F48E0 /* Preview Assets.xcassets */; };
 		54767BC829117586002F48E0 /* EnergyMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767BC729117586002F48E0 /* EnergyMonitorTests.swift */; };
+		54767C0E291276D7002F48E0 /* EnergyDataFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54767C06291276D7002F48E0 /* EnergyDataFeature.framework */; };
+		54767C13291276D7002F48E0 /* EnergyDataFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C12291276D7002F48E0 /* EnergyDataFeatureTests.swift */; };
+		54767C14291276D7002F48E0 /* EnergyDataFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = 54767C08291276D7002F48E0 /* EnergyDataFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54767C1C291276E5002F48E0 /* EnergyDataFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54767C06291276D7002F48E0 /* EnergyDataFeature.framework */; };
+		54767C1D291276E5002F48E0 /* EnergyDataFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54767C06291276D7002F48E0 /* EnergyDataFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54767C2929127B41002F48E0 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C2829127B41002F48E0 /* HTTPClient.swift */; };
+		54767C2C29127BA7002F48E0 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C2B29127BA7002F48E0 /* URLSessionHTTPClient.swift */; };
+		54767C3029128343002F48E0 /* LiveDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C2F29128343002F48E0 /* LiveDataLoader.swift */; };
+		54767C322912834F002F48E0 /* LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C312912834F002F48E0 /* LiveData.swift */; };
+		54767C3429128365002F48E0 /* HistoryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C3329128365002F48E0 /* HistoryLoader.swift */; };
+		54767C3629128370002F48E0 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C3529128370002F48E0 /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +33,35 @@
 			remoteGlobalIDString = 54767BB229117584002F48E0;
 			remoteInfo = EnergyMonitor;
 		};
+		54767C0F291276D7002F48E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54767BAB29117584002F48E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54767C05291276D7002F48E0;
+			remoteInfo = EnergyDataFeature;
+		};
+		54767C1E291276E5002F48E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54767BAB29117584002F48E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54767C05291276D7002F48E0;
+			remoteInfo = EnergyDataFeature;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		54767C20291276E5002F48E0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				54767C1D291276E5002F48E0 /* EnergyDataFeature.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		54767BB329117584002F48E0 /* EnergyMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnergyMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +71,16 @@
 		54767BBD29117585002F48E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54767BC329117586002F48E0 /* EnergyMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54767BC729117586002F48E0 /* EnergyMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyMonitorTests.swift; sourceTree = "<group>"; };
+		54767C06291276D7002F48E0 /* EnergyDataFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnergyDataFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54767C08291276D7002F48E0 /* EnergyDataFeature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnergyDataFeature.h; sourceTree = "<group>"; };
+		54767C0D291276D7002F48E0 /* EnergyDataFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyDataFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54767C12291276D7002F48E0 /* EnergyDataFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyDataFeatureTests.swift; sourceTree = "<group>"; };
+		54767C2829127B41002F48E0 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		54767C2B29127BA7002F48E0 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		54767C2F29128343002F48E0 /* LiveDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataLoader.swift; sourceTree = "<group>"; };
+		54767C312912834F002F48E0 /* LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
+		54767C3329128365002F48E0 /* HistoryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryLoader.swift; sourceTree = "<group>"; };
+		54767C3529128370002F48E0 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54767C1C291276E5002F48E0 /* EnergyDataFeature.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +96,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54767C03291276D7002F48E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54767C0A291276D7002F48E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54767C0E291276D7002F48E0 /* EnergyDataFeature.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +122,10 @@
 			children = (
 				54767BB529117584002F48E0 /* EnergyMonitor */,
 				54767BC629117586002F48E0 /* EnergyMonitorTests */,
+				54767C07291276D7002F48E0 /* EnergyDataFeature */,
+				54767C11291276D7002F48E0 /* EnergyDataFeatureTests */,
 				54767BB429117584002F48E0 /* Products */,
+				54767C1B291276E5002F48E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +134,8 @@
 			children = (
 				54767BB329117584002F48E0 /* EnergyMonitor.app */,
 				54767BC329117586002F48E0 /* EnergyMonitorTests.xctest */,
+				54767C06291276D7002F48E0 /* EnergyDataFeature.framework */,
+				54767C0D291276D7002F48E0 /* EnergyDataFeatureTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +143,7 @@
 		54767BB529117584002F48E0 /* EnergyMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				54767C212912778B002F48E0 /* Modules */,
 				54767BB629117584002F48E0 /* EnergyMonitorApp.swift */,
 				54767BB829117584002F48E0 /* ContentView.swift */,
 				54767BBA29117585002F48E0 /* Assets.xcassets */,
@@ -97,7 +168,126 @@
 			path = EnergyMonitorTests;
 			sourceTree = "<group>";
 		};
+		54767C07291276D7002F48E0 /* EnergyDataFeature */ = {
+			isa = PBXGroup;
+			children = (
+				54767C2529127A52002F48E0 /* Live Data Feature */,
+				54767C24291278E4002F48E0 /* Historic Data Feature */,
+				54767C2629127A5C002F48E0 /* Networking */,
+				54767C08291276D7002F48E0 /* EnergyDataFeature.h */,
+			);
+			path = EnergyDataFeature;
+			sourceTree = "<group>";
+		};
+		54767C11291276D7002F48E0 /* EnergyDataFeatureTests */ = {
+			isa = PBXGroup;
+			children = (
+				54767C12291276D7002F48E0 /* EnergyDataFeatureTests.swift */,
+			);
+			path = EnergyDataFeatureTests;
+			sourceTree = "<group>";
+		};
+		54767C1B291276E5002F48E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54767C212912778B002F48E0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				54767C2229127790002F48E0 /* Dashboard */,
+				54767C2329127796002F48E0 /* DetailGraph */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		54767C2229127790002F48E0 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		54767C2329127796002F48E0 /* DetailGraph */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailGraph;
+			sourceTree = "<group>";
+		};
+		54767C24291278E4002F48E0 /* Historic Data Feature */ = {
+			isa = PBXGroup;
+			children = (
+				54767C3329128365002F48E0 /* HistoryLoader.swift */,
+				54767C3529128370002F48E0 /* History.swift */,
+			);
+			path = "Historic Data Feature";
+			sourceTree = "<group>";
+		};
+		54767C2529127A52002F48E0 /* Live Data Feature */ = {
+			isa = PBXGroup;
+			children = (
+				54767C2F29128343002F48E0 /* LiveDataLoader.swift */,
+				54767C312912834F002F48E0 /* LiveData.swift */,
+			);
+			path = "Live Data Feature";
+			sourceTree = "<group>";
+		};
+		54767C2629127A5C002F48E0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				54767C2E29127F3B002F48E0 /* Live Data API */,
+				54767C2D29127F2B002F48E0 /* Historic Data API */,
+				54767C2A29127B6F002F48E0 /* Shared API Infra */,
+				54767C2729127B1C002F48E0 /* Shared API */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		54767C2729127B1C002F48E0 /* Shared API */ = {
+			isa = PBXGroup;
+			children = (
+				54767C2829127B41002F48E0 /* HTTPClient.swift */,
+			);
+			path = "Shared API";
+			sourceTree = "<group>";
+		};
+		54767C2A29127B6F002F48E0 /* Shared API Infra */ = {
+			isa = PBXGroup;
+			children = (
+				54767C2B29127BA7002F48E0 /* URLSessionHTTPClient.swift */,
+			);
+			path = "Shared API Infra";
+			sourceTree = "<group>";
+		};
+		54767C2D29127F2B002F48E0 /* Historic Data API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Historic Data API";
+			sourceTree = "<group>";
+		};
+		54767C2E29127F3B002F48E0 /* Live Data API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Live Data API";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		54767C01291276D7002F48E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54767C14291276D7002F48E0 /* EnergyDataFeature.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		54767BB229117584002F48E0 /* EnergyMonitor */ = {
@@ -108,10 +298,12 @@
 				54767BB029117584002F48E0 /* Frameworks */,
 				54767BB129117584002F48E0 /* Resources */,
 				54767BE02911769B002F48E0 /* SwiftLint Phase */,
+				54767C20291276E5002F48E0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				54767C1F291276E5002F48E0 /* PBXTargetDependency */,
 			);
 			name = EnergyMonitor;
 			productName = EnergyMonitor;
@@ -136,6 +328,42 @@
 			productReference = 54767BC329117586002F48E0 /* EnergyMonitorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		54767C05291276D7002F48E0 /* EnergyDataFeature */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54767C19291276D7002F48E0 /* Build configuration list for PBXNativeTarget "EnergyDataFeature" */;
+			buildPhases = (
+				54767C01291276D7002F48E0 /* Headers */,
+				54767C02291276D7002F48E0 /* Sources */,
+				54767C03291276D7002F48E0 /* Frameworks */,
+				54767C04291276D7002F48E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EnergyDataFeature;
+			productName = EnergyDataFeature;
+			productReference = 54767C06291276D7002F48E0 /* EnergyDataFeature.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		54767C0C291276D7002F48E0 /* EnergyDataFeatureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54767C1A291276D7002F48E0 /* Build configuration list for PBXNativeTarget "EnergyDataFeatureTests" */;
+			buildPhases = (
+				54767C09291276D7002F48E0 /* Sources */,
+				54767C0A291276D7002F48E0 /* Frameworks */,
+				54767C0B291276D7002F48E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54767C10291276D7002F48E0 /* PBXTargetDependency */,
+			);
+			name = EnergyDataFeatureTests;
+			productName = EnergyDataFeatureTests;
+			productReference = 54767C0D291276D7002F48E0 /* EnergyDataFeatureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -152,6 +380,13 @@
 					54767BC229117586002F48E0 = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 54767BB229117584002F48E0;
+					};
+					54767C05291276D7002F48E0 = {
+						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
+					};
+					54767C0C291276D7002F48E0 = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
@@ -170,6 +405,8 @@
 			targets = (
 				54767BB229117584002F48E0 /* EnergyMonitor */,
 				54767BC229117586002F48E0 /* EnergyMonitorTests */,
+				54767C05291276D7002F48E0 /* EnergyDataFeature */,
+				54767C0C291276D7002F48E0 /* EnergyDataFeatureTests */,
 			);
 		};
 /* End PBXProject section */
@@ -185,6 +422,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		54767BC129117586002F48E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54767C04291276D7002F48E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54767C0B291276D7002F48E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,6 +483,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		54767C02291276D7002F48E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54767C3629128370002F48E0 /* History.swift in Sources */,
+				54767C3429128365002F48E0 /* HistoryLoader.swift in Sources */,
+				54767C2929127B41002F48E0 /* HTTPClient.swift in Sources */,
+				54767C322912834F002F48E0 /* LiveData.swift in Sources */,
+				54767C3029128343002F48E0 /* LiveDataLoader.swift in Sources */,
+				54767C2C29127BA7002F48E0 /* URLSessionHTTPClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54767C09291276D7002F48E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54767C13291276D7002F48E0 /* EnergyDataFeatureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -239,6 +511,16 @@
 			isa = PBXTargetDependency;
 			target = 54767BB229117584002F48E0 /* EnergyMonitor */;
 			targetProxy = 54767BC429117586002F48E0 /* PBXContainerItemProxy */;
+		};
+		54767C10291276D7002F48E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54767C05291276D7002F48E0 /* EnergyDataFeature */;
+			targetProxy = 54767C0F291276D7002F48E0 /* PBXContainerItemProxy */;
+		};
+		54767C1F291276E5002F48E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54767C05291276D7002F48E0 /* EnergyDataFeature */;
+			targetProxy = 54767C1E291276E5002F48E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -362,6 +644,7 @@
 		54767BD829117586002F48E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -390,6 +673,7 @@
 		54767BD929117586002F48E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +737,111 @@
 			};
 			name = Release;
 		};
+		54767C15291276D7002F48E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = band.wrist.EnergyDataFeature;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		54767C16291276D7002F48E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = band.wrist.EnergyDataFeature;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		54767C17291276D7002F48E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = band.wrist.EnergyDataFeatureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		54767C18291276D7002F48E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = band.wrist.EnergyDataFeatureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,6 +868,24 @@
 			buildConfigurations = (
 				54767BDB29117586002F48E0 /* Debug */,
 				54767BDC29117586002F48E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54767C19291276D7002F48E0 /* Build configuration list for PBXNativeTarget "EnergyDataFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54767C15291276D7002F48E0 /* Debug */,
+				54767C16291276D7002F48E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54767C1A291276D7002F48E0 /* Build configuration list for PBXNativeTarget "EnergyDataFeatureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54767C17291276D7002F48E0 /* Debug */,
+				54767C18291276D7002F48E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
