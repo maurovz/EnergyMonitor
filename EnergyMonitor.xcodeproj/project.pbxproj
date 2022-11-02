@@ -19,6 +19,10 @@
 		54767C1D291276E5002F48E0 /* EnergyDataFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54767C06291276D7002F48E0 /* EnergyDataFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54767C2929127B41002F48E0 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C2829127B41002F48E0 /* HTTPClient.swift */; };
 		54767C2C29127BA7002F48E0 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C2B29127BA7002F48E0 /* URLSessionHTTPClient.swift */; };
+		54767C3029128343002F48E0 /* LiveDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C2F29128343002F48E0 /* LiveDataLoader.swift */; };
+		54767C322912834F002F48E0 /* LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C312912834F002F48E0 /* LiveData.swift */; };
+		54767C3429128365002F48E0 /* HistoryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C3329128365002F48E0 /* HistoryLoader.swift */; };
+		54767C3629128370002F48E0 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C3529128370002F48E0 /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		54767C12291276D7002F48E0 /* EnergyDataFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyDataFeatureTests.swift; sourceTree = "<group>"; };
 		54767C2829127B41002F48E0 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		54767C2B29127BA7002F48E0 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		54767C2F29128343002F48E0 /* LiveDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataLoader.swift; sourceTree = "<group>"; };
+		54767C312912834F002F48E0 /* LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
+		54767C3329128365002F48E0 /* HistoryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryLoader.swift; sourceTree = "<group>"; };
+		54767C3529128370002F48E0 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +220,8 @@
 		54767C24291278E4002F48E0 /* Historic Data Feature */ = {
 			isa = PBXGroup;
 			children = (
+				54767C3329128365002F48E0 /* HistoryLoader.swift */,
+				54767C3529128370002F48E0 /* History.swift */,
 			);
 			path = "Historic Data Feature";
 			sourceTree = "<group>";
@@ -219,6 +229,8 @@
 		54767C2529127A52002F48E0 /* Live Data Feature */ = {
 			isa = PBXGroup;
 			children = (
+				54767C2F29128343002F48E0 /* LiveDataLoader.swift */,
+				54767C312912834F002F48E0 /* LiveData.swift */,
 			);
 			path = "Live Data Feature";
 			sourceTree = "<group>";
@@ -475,7 +487,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54767C3629128370002F48E0 /* History.swift in Sources */,
+				54767C3429128365002F48E0 /* HistoryLoader.swift in Sources */,
 				54767C2929127B41002F48E0 /* HTTPClient.swift in Sources */,
+				54767C322912834F002F48E0 /* LiveData.swift in Sources */,
+				54767C3029128343002F48E0 /* LiveDataLoader.swift in Sources */,
 				54767C2C29127BA7002F48E0 /* URLSessionHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
