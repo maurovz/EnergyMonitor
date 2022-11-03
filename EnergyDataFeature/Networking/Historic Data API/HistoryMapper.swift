@@ -4,20 +4,34 @@ public final class HistoryMapper {
   }
 
   private struct Root: Decodable {
-    private let building_active_power: Decimal
-    private let grid_active_power: Decimal
-    private let pv_active_power: Decimal
-    private let quasars_active_power: Decimal
-    private let timestamp: String
+    let buildingActivePower: Decimal
+    let gridActivePower: Decimal
+    let pvActivePower: Decimal
+    let quasarsActivePower: Decimal
+    let timestamp: String
   }
 
   private static func toModel(_ data: [HistoryMapper.Root]) -> [History]? {
-    return nil
+    return data.map {
+      let olDateFormatter = DateFormatter()
+      olDateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
+
+      let date = olDateFormatter.date(from: $0.timestamp)
+
+      return History(
+      buildingPower: $0.buildingActivePower,
+      gridPower: $0.gridActivePower,
+      pvPower: $0.pvActivePower,
+      quasarsPower: $0.quasarsActivePower,
+      timeStamp: date!) }
   }
 
   public static func map(data: Data) throws -> [History] {
     do {
-      let root = try JSONDecoder().decode([Root].self, from: data)
+      let decoder = JSONDecoder()
+      decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+      let root = try decoder.decode([Root].self, from: data)
       guard let mappedHistory = toModel(root) else {
         throw Error.invalidData
       }

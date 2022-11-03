@@ -32,19 +32,4 @@ public final class URLSessionHTTPClient: HTTPClient {
     task.resume()
     return URLSessionTaskWrapper(wrapped: task)
   }
-
-  private func localJSONLoader(fileName: String) throws -> Data? {
-    guard
-      let path = Bundle.main.path(forResource: fileName, ofType: "json"),
-      let url = URL(string: path) else {
-        return nil
-      }
-
-    do {
-      let data = try Data(contentsOf: url)
-      return data
-    } catch {
-      throw error
-    }
-  }
 }

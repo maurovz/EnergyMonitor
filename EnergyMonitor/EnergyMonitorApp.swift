@@ -4,7 +4,7 @@ import SwiftUI
 struct EnergyMonitorApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      DashboardComposer.createModule()
     }
   }
 }
