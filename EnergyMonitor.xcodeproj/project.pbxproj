@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5449DFD829130C3E00F706B0 /* RemoteHistoricDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5449DFD729130C3E00F706B0 /* RemoteHistoricDataLoader.swift */; };
+		5449DFDC29130D2B00F706B0 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5449DFDB29130D2B00F706B0 /* CoreDataStack.swift */; };
+		5449DFDF29130D5F00F706B0 /* EnergyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5449DFDD29130D5F00F706B0 /* EnergyDataModel.xcdatamodeld */; };
+		5449DFE129130D7300F706B0 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5449DFE029130D7300F706B0 /* CoreDataService.swift */; };
+		5449DFE32913126C00F706B0 /* HistoryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5449DFE22913126C00F706B0 /* HistoryMapper.swift */; };
+		5449DFE62913D90A00F706B0 /* historic_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5449DFE52913D90A00F706B0 /* historic_data.json */; };
 		54767BB729117584002F48E0 /* EnergyMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767BB629117584002F48E0 /* EnergyMonitorApp.swift */; };
-		54767BB929117584002F48E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767BB829117584002F48E0 /* ContentView.swift */; };
 		54767BBB29117585002F48E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54767BBA29117585002F48E0 /* Assets.xcassets */; };
 		54767BBE29117585002F48E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54767BBD29117585002F48E0 /* Preview Assets.xcassets */; };
 		54767BC829117586002F48E0 /* EnergyMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767BC729117586002F48E0 /* EnergyMonitorTests.swift */; };
@@ -31,6 +36,10 @@
 		54767C582912F9E4002F48E0 /* LiveDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */; };
 		54767C5A2912FA36002F48E0 /* HistoricDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */; };
 		54767C5C2912FC47002F48E0 /* DashboardComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C5B2912FC47002F48E0 /* DashboardComposer.swift */; };
+		54AD2A6929144094005CF7DE /* RemoteLiveDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A6829144094005CF7DE /* RemoteLiveDataLoader.swift */; };
+		54AD2A6B291444E2005CF7DE /* LiveDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A6A291444E2005CF7DE /* LiveDataMapper.swift */; };
+		54AD2A6D291454AB005CF7DE /* live_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 54AD2A6C291454AB005CF7DE /* live_data.json */; };
+		54AD2A6F29145EE3005CF7DE /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A6E29145EE3005CF7DE /* MockHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,9 +81,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5449DFD729130C3E00F706B0 /* RemoteHistoricDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHistoricDataLoader.swift; sourceTree = "<group>"; };
+		5449DFDB29130D2B00F706B0 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		5449DFDE29130D5F00F706B0 /* EnergyDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EnergyDataModel.xcdatamodel; sourceTree = "<group>"; };
+		5449DFE029130D7300F706B0 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		5449DFE22913126C00F706B0 /* HistoryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMapper.swift; sourceTree = "<group>"; };
+		5449DFE52913D90A00F706B0 /* historic_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = historic_data.json; sourceTree = "<group>"; };
 		54767BB329117584002F48E0 /* EnergyMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnergyMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54767BB629117584002F48E0 /* EnergyMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyMonitorApp.swift; sourceTree = "<group>"; };
-		54767BB829117584002F48E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54767BBA29117585002F48E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54767BBD29117585002F48E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54767BC329117586002F48E0 /* EnergyMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +113,10 @@
 		54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataViewModel.swift; sourceTree = "<group>"; };
 		54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricDataViewModel.swift; sourceTree = "<group>"; };
 		54767C5B2912FC47002F48E0 /* DashboardComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardComposer.swift; sourceTree = "<group>"; };
+		54AD2A6829144094005CF7DE /* RemoteLiveDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLiveDataLoader.swift; sourceTree = "<group>"; };
+		54AD2A6A291444E2005CF7DE /* LiveDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataMapper.swift; sourceTree = "<group>"; };
+		54AD2A6C291454AB005CF7DE /* live_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = live_data.json; sourceTree = "<group>"; };
+		54AD2A6E29145EE3005CF7DE /* MockHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +156,7 @@
 		5449DFD32912FED200F706B0 /* Composer */ = {
 			isa = PBXGroup;
 			children = (
+				5449DFE42913D8DB00F706B0 /* Mock Data */,
 				54767C5B2912FC47002F48E0 /* DashboardComposer.swift */,
 			);
 			path = Composer;
@@ -159,6 +178,34 @@
 				54767C4529128D36002F48E0 /* DashboardView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5449DFD929130CA200F706B0 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				5449DFDA29130D1400F706B0 /* Infra */,
+				5449DFE029130D7300F706B0 /* CoreDataService.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		5449DFDA29130D1400F706B0 /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				5449DFDB29130D2B00F706B0 /* CoreDataStack.swift */,
+				5449DFDD29130D5F00F706B0 /* EnergyDataModel.xcdatamodeld */,
+			);
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		5449DFE42913D8DB00F706B0 /* Mock Data */ = {
+			isa = PBXGroup;
+			children = (
+				54AD2A6C291454AB005CF7DE /* live_data.json */,
+				5449DFE52913D90A00F706B0 /* historic_data.json */,
+				54AD2A6E29145EE3005CF7DE /* MockHTTPClient.swift */,
+			);
+			path = "Mock Data";
 			sourceTree = "<group>";
 		};
 		54767BAA29117584002F48E0 = {
@@ -190,7 +237,6 @@
 				54767C3729128AFC002F48E0 /* Resources */,
 				54767C212912778B002F48E0 /* Modules */,
 				54767BB629117584002F48E0 /* EnergyMonitorApp.swift */,
-				54767BB829117584002F48E0 /* ContentView.swift */,
 				54767BBA29117585002F48E0 /* Assets.xcassets */,
 				54767BBC29117585002F48E0 /* Preview Content */,
 			);
@@ -216,8 +262,9 @@
 		54767C07291276D7002F48E0 /* EnergyDataFeature */ = {
 			isa = PBXGroup;
 			children = (
-				54767C2529127A52002F48E0 /* Live Data Feature */,
-				54767C24291278E4002F48E0 /* Historic Data Feature */,
+				54767C2529127A52002F48E0 /* Live Data API */,
+				54767C24291278E4002F48E0 /* Historic Data API */,
+				5449DFD929130CA200F706B0 /* Cache */,
 				54767C2629127A5C002F48E0 /* Networking */,
 				54767C08291276D7002F48E0 /* EnergyDataFeature.h */,
 			);
@@ -265,22 +312,22 @@
 			path = DetailGraph;
 			sourceTree = "<group>";
 		};
-		54767C24291278E4002F48E0 /* Historic Data Feature */ = {
+		54767C24291278E4002F48E0 /* Historic Data API */ = {
 			isa = PBXGroup;
 			children = (
 				54767C3329128365002F48E0 /* HistoryLoader.swift */,
 				54767C3529128370002F48E0 /* History.swift */,
 			);
-			path = "Historic Data Feature";
+			path = "Historic Data API";
 			sourceTree = "<group>";
 		};
-		54767C2529127A52002F48E0 /* Live Data Feature */ = {
+		54767C2529127A52002F48E0 /* Live Data API */ = {
 			isa = PBXGroup;
 			children = (
 				54767C2F29128343002F48E0 /* LiveDataLoader.swift */,
 				54767C312912834F002F48E0 /* LiveData.swift */,
 			);
-			path = "Live Data Feature";
+			path = "Live Data API";
 			sourceTree = "<group>";
 		};
 		54767C2629127A5C002F48E0 /* Networking */ = {
@@ -313,6 +360,8 @@
 		54767C2D29127F2B002F48E0 /* Historic Data API */ = {
 			isa = PBXGroup;
 			children = (
+				5449DFD729130C3E00F706B0 /* RemoteHistoricDataLoader.swift */,
+				5449DFE22913126C00F706B0 /* HistoryMapper.swift */,
 			);
 			path = "Historic Data API";
 			sourceTree = "<group>";
@@ -320,6 +369,8 @@
 		54767C2E29127F3B002F48E0 /* Live Data API */ = {
 			isa = PBXGroup;
 			children = (
+				54AD2A6829144094005CF7DE /* RemoteLiveDataLoader.swift */,
+				54AD2A6A291444E2005CF7DE /* LiveDataMapper.swift */,
 			);
 			path = "Live Data API";
 			sourceTree = "<group>";
@@ -492,8 +543,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5449DFE62913D90A00F706B0 /* historic_data.json in Resources */,
 				54767C3A29128B6C002F48E0 /* Localized.strings in Resources */,
 				54767BBE29117585002F48E0 /* Preview Assets.xcassets in Resources */,
+				54AD2A6D291454AB005CF7DE /* live_data.json in Resources */,
 				54767BBB29117585002F48E0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,12 +602,12 @@
 			files = (
 				54767C5C2912FC47002F48E0 /* DashboardComposer.swift in Sources */,
 				54767C4429128C75002F48E0 /* LocalizedConstants.swift in Sources */,
+				54AD2A6F29145EE3005CF7DE /* MockHTTPClient.swift in Sources */,
 				54767C5A2912FA36002F48E0 /* HistoricDataViewModel.swift in Sources */,
 				54767C582912F9E4002F48E0 /* LiveDataViewModel.swift in Sources */,
 				54767C4229128C39002F48E0 /* Localization+Extension.swift in Sources */,
 				54767C4629128D36002F48E0 /* DashboardView.swift in Sources */,
 				54767C562912F8E3002F48E0 /* DashboardViewModel.swift in Sources */,
-				54767BB929117584002F48E0 /* ContentView.swift in Sources */,
 				54767BB729117584002F48E0 /* EnergyMonitorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,12 +624,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5449DFD829130C3E00F706B0 /* RemoteHistoricDataLoader.swift in Sources */,
 				54767C3629128370002F48E0 /* History.swift in Sources */,
+				5449DFE129130D7300F706B0 /* CoreDataService.swift in Sources */,
+				5449DFE32913126C00F706B0 /* HistoryMapper.swift in Sources */,
+				5449DFDF29130D5F00F706B0 /* EnergyDataModel.xcdatamodeld in Sources */,
 				54767C3429128365002F48E0 /* HistoryLoader.swift in Sources */,
+				54AD2A6929144094005CF7DE /* RemoteLiveDataLoader.swift in Sources */,
 				54767C2929127B41002F48E0 /* HTTPClient.swift in Sources */,
 				54767C322912834F002F48E0 /* LiveData.swift in Sources */,
+				54AD2A6B291444E2005CF7DE /* LiveDataMapper.swift in Sources */,
 				54767C3029128343002F48E0 /* LiveDataLoader.swift in Sources */,
 				54767C2C29127BA7002F48E0 /* URLSessionHTTPClient.swift in Sources */,
+				5449DFDC29130D2B00F706B0 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -990,6 +1050,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5449DFDD29130D5F00F706B0 /* EnergyDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5449DFDE29130D5F00F706B0 /* EnergyDataModel.xcdatamodel */,
+			);
+			currentVersion = 5449DFDE29130D5F00F706B0 /* EnergyDataModel.xcdatamodel */;
+			path = EnergyDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 54767BAB29117584002F48E0 /* Project object */;
 }

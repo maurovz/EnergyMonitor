@@ -2,25 +2,29 @@ import Foundation
 import EnergyDataFeature
 
 public final class HistoricDataViewModel: Identifiable, ObservableObject {
-  private let historyLoader: HistoryLoader
-  private var historicData: [History] = []
+  private var historicData: History
 
-  init(historyLoader: HistoryLoader) {
-    self.historyLoader = historyLoader
-  }
+  lazy var buildingPower = {
+    historicData.buildingPower
+  }()
 
-  public func fetch(completion: @escaping (Bool) -> Void) {
-    historyLoader.load { [weak self] result in
-      guard let self = self else { return }
+  lazy var gridPower = {
+    historicData.gridPower
+  }()
 
-      switch result {
-      case .success(let data):
-        self.historicData = data
-        completion(true)
+  lazy var pvPower = {
+    historicData.pvPower
+  }()
 
-      case .failure:
-        completion(false)
-      }
-    }
+  lazy var quasarsPower = {
+    historicData.quasarsPower
+  }()
+
+  lazy var timeStamp = {
+    historicData.timeStamp
+  }()
+
+  init(historicData: History) {
+    self.historicData = historicData
   }
 }

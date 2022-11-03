@@ -1,6 +1,12 @@
 import SwiftUI
 
 struct DashboardView: View {
+  @ObservedObject var viewModel: DashboardViewModel
+
+  init(viewModel: DashboardViewModel) {
+    self.viewModel = viewModel
+  }
+
   var body: some View {
     ScrollView {
       Text("Energy Dashboard")
@@ -9,7 +15,7 @@ struct DashboardView: View {
         .padding()
       VStack {
         HStack {
-          SquareWidgetView(title: "Building Energy", value: "1000 KW", background: .blue)
+          SquareWidgetView(title: "Building Energy", value: "\($viewModel.historicData.count)", background: .blue)
             .padding([.top, .leading])
           SquareWidgetView(title: "Charged Energy", value: "300 KW", background: .red)
             .padding([.top, .trailing])
@@ -25,11 +31,11 @@ struct DashboardView: View {
   }
 }
 
-struct DashboardView_Previews: PreviewProvider {
-  static var previews: some View {
-    DashboardView()
-  }
-}
+// struct DashboardView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    DashboardView()
+//  }
+// }
 
 struct SquareWidgetView: View {
   let title: String

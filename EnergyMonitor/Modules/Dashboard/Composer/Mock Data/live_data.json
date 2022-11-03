@@ -1,0 +1,9 @@
+{
+    "solar_power": 7.827,
+    "quasars_power": -38.732,
+    "grid_power": 80.475,
+    "building_demand": 127.03399999999999,
+    "system_soc": 48.333333333333336,
+    "total_energy": 960,
+    "current_energy": 464.0
+}
