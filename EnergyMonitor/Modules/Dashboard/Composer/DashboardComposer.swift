@@ -3,13 +3,24 @@ import EnergyDataFeature
 
 struct DashboardComposer {
   static func createModule() -> DashboardView {
-    DashboardView(
-      viewModel:
-        DashboardViewModel(
-          historyLoader: RemoteHistoricDataLoader(
-            url: URL(fileURLWithPath: "data.json"),
-            client: MockHTTPClient(),
-            cache: CoreDataServices())))
+    let coreDataService = CoreDataServices()
+
+    let remoteHistoryLoader = RemoteHistoricDataLoader(
+      url: URL(string: "historic_data")!,
+      client: MockHTTPClient(),
+      cache: coreDataService)
+
+    let remoteLiveDataLoader = RemoteLiveDataLoader(
+      url: URL(string: "live-data")!,
+      client: MockHTTPClient(),
+      cache: coreDataService)
+
+    return DashboardView(
+      viewModel: DashboardViewModel(
+        historyLoader: remoteHistoryLoader,
+        liveDataViewModel: LiveDataViewModel(liveDataLoader: remoteLiveDataLoader)
+      )
+    )
   }
 }
 
@@ -27,11 +38,8 @@ final class MockHTTPClient: HTTPClient {
   private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
   private(set) var cancelledURLs = [URL]()
 
-  var requestedURLs: [URL] {
-    return messages.map { $0.url }
-  }
-
   func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
+    print(url.path)
     let fileData = LocalFiles.loadJSON(fileName: url.path)
 
     guard let data = fileData else {
@@ -45,10 +53,6 @@ final class MockHTTPClient: HTTPClient {
     return Task { [weak self] in
       self?.cancelledURLs.append(url)
     }
-  }
-
-  func complete(with error: Error, at index: Int = 0) {
-    messages[index].completion(.failure(error))
   }
 
   func complete(url: URL, withStatusCode code: Int, data: Data, at index: Int = 0) {
@@ -65,7 +69,7 @@ final class MockHTTPClient: HTTPClient {
 struct LocalFiles {
   static func loadJSON(fileName: String) -> Data? {
     guard
-      let url = Bundle.main.url(forResource: "historic_data", withExtension: "json"),
+      let url = Bundle.main.url(forResource: fileName, withExtension: "json"),
       let data = try? Data(contentsOf: url)
     else {
       return nil

@@ -6,16 +6,16 @@ final class DashboardViewModel: ObservableObject {
   private let historyLoader: HistoryLoader
 
   @Published var historicData: [HistoricDataViewModel] = []
-//  @Published var liveDataViewModel: LiveDataViewModel
+  @Published var liveDataViewModel: LiveDataViewModel
 
-  init(historyLoader: HistoryLoader) {
+  init(historyLoader: HistoryLoader, liveDataViewModel: LiveDataViewModel) {
     self.historyLoader = historyLoader
-//    self.liveDataViewModel = liveDataViewModel
+    self.liveDataViewModel = liveDataViewModel
     fetchData()
   }
 
   func fetchData() {
-//    liveDataViewModel.fetch { _ in }
+    liveDataViewModel.fetch { _ in }
     fetchHistoricData { _ in }
   }
 
