@@ -13,10 +13,10 @@ public final class HistoryMapper {
 
   private static func toModel(_ data: [HistoryMapper.Root]) -> [History]? {
     return data.map {
-      let olDateFormatter = DateFormatter()
-      olDateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
+      let formatter = DateFormatter()
+      formatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
 
-      let date = olDateFormatter.date(from: $0.timestamp)
+      let date = formatter.date(from: $0.timestamp)
 
       return History(
       buildingPower: $0.buildingActivePower,

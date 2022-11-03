@@ -5,7 +5,7 @@ public final class LiveDataMapper {
 
   private struct Root: Decodable {
     let solarPower: Decimal
-    let quasarPower: Decimal
+    let quasarsPower: Decimal
     let gridPower: Decimal
     let buildingDemand: Decimal
     let systemSoc: Decimal
@@ -15,7 +15,7 @@ public final class LiveDataMapper {
     var toModel: LiveData? {
       return LiveData(
         solarPower: solarPower,
-        quasarPower: quasarPower,
+        quasarPower: quasarsPower,
         gridPower: gridPower,
         buildingDemand: buildingDemand,
         systemSoc: systemSoc,
@@ -26,7 +26,10 @@ public final class LiveDataMapper {
 
   public static func map(data: Data) throws -> LiveData {
     do {
-      let root = try JSONDecoder().decode(Root.self, from: data)
+      let decoder = JSONDecoder()
+      decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+      let root = try decoder.decode(Root.self, from: data)
       guard let mappedLiveData = root.toModel else {
         throw Error.invalidData
       }
