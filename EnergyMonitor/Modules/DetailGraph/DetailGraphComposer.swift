@@ -1,8 +1,7 @@
-//
-//  DetailGraphComposer.swift
-//  EnergyMonitor
-//
-//  Created by Mauricio Vazquez on 4/11/22.
-//
-
 import Foundation
+
+struct DetailGraphComposer {
+  static func createModule(historicData: [HistoricDataViewModel]) -> DetailGraphView {
+    DetailGraphView(historicData: historicData)
+  }
+}

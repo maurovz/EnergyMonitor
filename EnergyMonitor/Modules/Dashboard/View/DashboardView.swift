@@ -8,26 +8,30 @@ struct DashboardView: View {
   }
 
   var body: some View {
-    ScrollView {
-      Text("Energy Dashboard")
-        .foregroundColor(.white)
-        .font(.system(size: 30, weight: .semibold))
-        .padding()
-      VStack {
-        HStack {
-          SquareWidgetView(title: "Building Energy", value: "\($viewModel.historicData.count)", background: .blue)
-            .padding([.top, .leading])
-          SquareWidgetView(title: "Charged Energy", value: "300 KW", background: .red)
-            .padding([.top, .trailing])
-        }
-
-        RectangleWidgetView(title: "Solar", value: "320", background: .purple)
-          .padding([.top, .leading, .trailing])
-        RectangleWidgetView(title: "Solar", value: "320", background: .orange)
+    NavigationView {
+      ScrollView {
+        Text("Energy Dashboard")
+          .foregroundColor(.white)
+          .font(.system(size: 30, weight: .semibold))
           .padding()
+        VStack {
+          HStack {
+            SquareWidgetView(title: "Building Energy", value: "\($viewModel.historicData.count)", background: .blue)
+              .padding([.top, .leading])
+            SquareWidgetView(title: "Charged Energy", value: "300 KW", background: .red)
+              .padding([.top, .trailing])
+          }
+
+          RectangleWidgetView(title: "Solar", value: "320", background: .purple)
+            .padding([.top, .leading, .trailing])
+
+          NavigationLink(destination: DetailGraphComposer.createModule(historicData: viewModel.historicData)) {
+            RectangleWidgetView(title: "Detalle", value: "320", background: .orange)
+              .padding()
+          }
+        }
       }
     }
-    .background(Color.black)
   }
 }
 
