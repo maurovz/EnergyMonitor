@@ -2,13 +2,15 @@ import Foundation
 import EnergyDataFeature
 
 struct DashboardComposer {
+  static let historicData = "historic_data"
+
   static func createModule() -> DashboardView {
     let coreDataService = CoreDataServices()
 
     let remoteHistoryLoader = RemoteHistoricDataLoader(
-      url: URL(string: "historic_data")!,
+      url: URL(string: historicData)!,
       client: MockHTTPClient(
-        filePath: "historic_data"),
+        filePath: historicData),
       cache: coreDataService)
 
     let remoteLiveDataLoader = RemoteLiveDataLoader(

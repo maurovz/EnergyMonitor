@@ -8,26 +8,50 @@ struct DashboardView: View {
   }
 
   var body: some View {
-    ScrollView {
-      Text("Energy Dashboard")
-        .foregroundColor(.white)
-        .font(.system(size: 30, weight: .semibold))
-        .padding()
-      VStack {
-        HStack {
-          SquareWidgetView(title: "Building Energy", value: "\($viewModel.historicData.count)", background: .blue)
-            .padding([.top, .leading])
-          SquareWidgetView(title: "Charged Energy", value: "300 KW", background: .red)
-            .padding([.top, .trailing])
-        }
-
-        RectangleWidgetView(title: "Solar", value: "320", background: .purple)
-          .padding([.top, .leading, .trailing])
-        RectangleWidgetView(title: "Solar", value: "320", background: .orange)
+    NavigationView {
+      ScrollView {
+        Text("Energy Dashboard")
+          .foregroundColor(.white)
+          .font(.system(size: 30, weight: .semibold))
           .padding()
+        VStack {
+          HStack {
+            SquareWidgetView(
+              title: "Discharged Energy",
+              value: "\(String(format: "%.2f", viewModel.totalDischargedPower)) KW",
+              background: .blue)
+              .padding([.top, .leading])
+            SquareWidgetView(
+              title: "Charged Energy",
+              value: "\(String(format: "%.2f", viewModel.totalChargedPower)) KW",
+              background: .red)
+              .padding([.top, .trailing])
+          }
+
+          RectangleWidgetView(values: [
+            RectangleWidgetView.DisplayValue(
+              title: "Solar Power", amount: viewModel.liveDataViewModel.solarPower),
+            RectangleWidgetView.DisplayValue(
+              title: "Quasar Power", amount: viewModel.liveDataViewModel.quasarPower),
+            RectangleWidgetView.DisplayValue(
+              title: "Building Demand", amount: viewModel.liveDataViewModel.buildingDemand),
+            RectangleWidgetView.DisplayValue(
+              title: "System Soc", amount: viewModel.liveDataViewModel.systemSoc)
+          ], background: .purple)
+            .padding([.top, .leading, .trailing])
+
+          NavigationLink(destination: DetailGraphComposer.createModule(historicData: viewModel.historicData)) {
+            RectangleWidgetView(values: [
+              RectangleWidgetView.DisplayValue(title: "Solar Power", amount: viewModel.liveDataViewModel.solarPower),
+              RectangleWidgetView.DisplayValue(title: "QuasarPower", amount: viewModel.liveDataViewModel.quasarPower),
+              RectangleWidgetView.DisplayValue(title: "Building Demand", amount: viewModel.liveDataViewModel.buildingDemand),
+              RectangleWidgetView.DisplayValue(title: "System Soc", amount: viewModel.liveDataViewModel.systemSoc)
+            ], background: .orange)
+              .padding()
+          }
+        }
       }
     }
-    .background(Color.black)
   }
 }
 
@@ -53,73 +77,44 @@ struct SquareWidgetView: View {
       .padding()
 
       Text(value)
-        .font(.system(size: 25, weight: .bold))
+        .font(.system(size: 20, weight: .bold))
         .foregroundColor(.white)
       Spacer()
     }
     .frame(maxWidth: .infinity, minHeight: 150)
     .padding()
     .background(background)
-    .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
+    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
   }
 }
 
 struct RectangleWidgetView: View {
-  let title: String
-  let value: String
+  struct DisplayValue: Hashable {
+    let title: String
+    let amount: String
+  }
+
+  let values: [DisplayValue]
   let background: Color
 
   var body: some View {
-    VStack(alignment: .leading) {
-      HStack {
-        VStack {
-          Text(title)
-            .font(.system(size: 18, weight: .medium))
-          .foregroundColor(.white)
-
-          HStack {
-            Text(value)
-              .font(.system(size: 25, weight: .bold))
+    VStack {
+      HStack(alignment: .top) {
+        ForEach(values, id: \.self) { value in
+          VStack {
+            Text(value.title)
+              .font(.system(size: 14, weight: .medium))
               .foregroundColor(.white)
+
+            HStack {
+              Text(value.amount)
+                .font(.system(size: 20, weight: .bold))
+                .foregroundColor(.white)
+            }
           }
+          .padding([.top, .leading, .bottom])
         }
-        .padding([.top, .leading, .bottom])
-
-        VStack {
-          Text(title)
-            .font(.system(size: 18, weight: .medium))
-          .foregroundColor(.white)
-
-          Text(value)
-            .font(.system(size: 25, weight: .bold))
-            .foregroundColor(.white)
-        }
-        .padding([.top, .leading, .bottom])
-
-        Spacer()
-        VStack {
-          Text(title)
-            .font(.system(size: 18, weight: .medium))
-          .foregroundColor(.white)
-
-          Text(value)
-            .font(.system(size: 25, weight: .bold))
-            .foregroundColor(.white)
-        }
-        .padding()
-
-        VStack {
-          Text(title)
-            .font(.system(size: 18, weight: .medium))
-          .foregroundColor(.white)
-
-          Text(value)
-            .font(.system(size: 25, weight: .bold))
-            .foregroundColor(.white)
-        }
-        .padding()
       }
-
     }
     .frame(maxWidth: .infinity, minHeight: 150)
     .padding()

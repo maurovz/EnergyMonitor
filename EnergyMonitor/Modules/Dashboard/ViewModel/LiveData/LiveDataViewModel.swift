@@ -1,6 +1,12 @@
 import Foundation
 import EnergyDataFeature
 
+extension Double {
+    var truncate: String {
+       return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
+    }
+}
+
 public final class LiveDataViewModel: Identifiable, ObservableObject {
   private let liveDataLoader: LiveDataLoader
 
@@ -8,37 +14,37 @@ public final class LiveDataViewModel: Identifiable, ObservableObject {
 
   lazy var solarPower: String = {
     guard let liveData = liveData else { return "" }
-    return "\(liveData.solarPower)"
+    return "\(String(format: "%.2f", liveData.solarPower))"
   }()
 
   lazy var quasarPower: String = {
     guard let liveData = liveData else { return "" }
-    return "\(liveData.quasarPower)"
+    return "\(String(format: "%.2f", liveData.quasarPower))"
   }()
 
   lazy var gridPower: String = {
     guard let liveData = liveData else { return "" }
-    return "\(liveData.gridPower)"
+    return "\(String(format: "%.2f", liveData.gridPower))"
   }()
 
   lazy var buildingDemand: String = {
     guard let liveData = liveData else { return "" }
-    return "\(liveData.buildingDemand)"
+    return "\(String(format: "%.2f", liveData.buildingDemand))"
   }()
 
   lazy var systemSoc: String = {
     guard let liveData = liveData else { return "" }
-    return "\(liveData.systemSoc)"
+    return "\(String(format: "%.2f", liveData.systemSoc))"
   }()
 
   lazy var totalEnergy: String = {
     guard let liveData = liveData else { return "" }
-    return "\(liveData.totalEnergy)"
+    return "\(liveData.totalEnergy.truncate)"
   }()
 
   lazy var currentEnergy: String = {
     guard let liveData = liveData else { return "" }
-    return "\(liveData.currentEnergy)"
+    return "\(liveData.currentEnergy.truncate)"
   }()
 
   public init(liveDataLoader: LiveDataLoader) {

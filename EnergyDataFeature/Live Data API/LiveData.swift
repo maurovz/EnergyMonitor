@@ -1,20 +1,20 @@
 public struct LiveData {
-  public let solarPower: Decimal
-  public let quasarPower: Decimal
-  public let gridPower: Decimal
-  public let buildingDemand: Decimal
-  public let systemSoc: Decimal
-  public let totalEnergy: Decimal
-  public let currentEnergy: Decimal
+  public let solarPower: Double
+  public let quasarPower: Double
+  public let gridPower: Double
+  public let buildingDemand: Double
+  public let systemSoc: Double
+  public let totalEnergy: Double
+  public let currentEnergy: Double
 
   public init(
-    solarPower: Decimal,
-    quasarPower: Decimal,
-    gridPower: Decimal,
-    buildingDemand: Decimal,
-    systemSoc: Decimal,
-    totalEnergy: Decimal,
-    currentEnergy: Decimal) {
+    solarPower: Double,
+    quasarPower: Double,
+    gridPower: Double,
+    buildingDemand: Double,
+    systemSoc: Double,
+    totalEnergy: Double,
+    currentEnergy: Double) {
       self.solarPower = solarPower
       self.quasarPower = quasarPower
       self.gridPower = gridPower

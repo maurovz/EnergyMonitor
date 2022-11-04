@@ -4,13 +4,13 @@ public final class LiveDataMapper {
   }
 
   private struct Root: Decodable {
-    let solarPower: Decimal
-    let quasarsPower: Decimal
-    let gridPower: Decimal
-    let buildingDemand: Decimal
-    let systemSoc: Decimal
-    let totalEnergy: Decimal
-    let currentEnergy: Decimal
+    let solarPower: Double
+    let quasarsPower: Double
+    let gridPower: Double
+    let buildingDemand: Double
+    let systemSoc: Double
+    let totalEnergy: Double
+    let currentEnergy: Double
 
     var toModel: LiveData? {
       return LiveData(
