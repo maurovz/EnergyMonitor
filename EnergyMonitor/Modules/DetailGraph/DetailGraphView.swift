@@ -3,7 +3,7 @@ import Charts
 import EnergyDataFeature
 
 struct DetailGraphView: View {
-  let historicData: [HistoricDataViewModel]
+  private let historicData: [HistoricDataViewModel]
 
   init(historicData: [HistoricDataViewModel]) {
     self.historicData = historicData
