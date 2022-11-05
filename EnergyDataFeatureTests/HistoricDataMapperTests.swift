@@ -1,7 +1,7 @@
 import XCTest
 import EnergyDataFeature
 
-class HistoricDataMapperTest: XCTestCase {
+class HistoricDataMapperTests: XCTestCase {
   func test_map_throwsErrorWithInvalidJSON() throws {
     let invalidJSON = Data("invalid json".utf8)
 
