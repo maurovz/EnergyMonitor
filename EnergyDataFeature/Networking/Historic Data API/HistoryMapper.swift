@@ -1,8 +1,4 @@
 public final class HistoryMapper {
-  public enum Error: Swift.Error {
-    case invalidData
-  }
-
   private struct Root: Decodable {
     let buildingActivePower: Decimal
     let gridActivePower: Decimal
@@ -33,7 +29,7 @@ public final class HistoryMapper {
 
       let root = try decoder.decode([Root].self, from: data)
       guard let mappedHistory = toModel(root) else {
-        throw Error.invalidData
+        throw EnergyDataError.decodeError
       }
 
       return mappedHistory

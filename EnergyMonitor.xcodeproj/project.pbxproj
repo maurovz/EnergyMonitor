@@ -30,12 +30,14 @@
 		54767C3629128370002F48E0 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C3529128370002F48E0 /* History.swift */; };
 		54767C3A29128B6C002F48E0 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54767C3C29128B6C002F48E0 /* Localized.strings */; };
 		54767C4229128C39002F48E0 /* Localization+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4129128C39002F48E0 /* Localization+Extension.swift */; };
-		54767C4429128C75002F48E0 /* LocalizedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4329128C75002F48E0 /* LocalizedConstants.swift */; };
+		54767C4429128C75002F48E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4329128C75002F48E0 /* Constants.swift */; };
 		54767C4629128D36002F48E0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C4529128D36002F48E0 /* DashboardView.swift */; };
 		54767C562912F8E3002F48E0 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C552912F8E3002F48E0 /* DashboardViewModel.swift */; };
 		54767C582912F9E4002F48E0 /* LiveDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */; };
 		54767C5A2912FA36002F48E0 /* HistoricDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */; };
 		54767C5C2912FC47002F48E0 /* DashboardComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54767C5B2912FC47002F48E0 /* DashboardComposer.swift */; };
+		547E1D102916B0B100F31C03 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A782916996C005CF7DE /* AppError.swift */; };
+		547E1D132916BBD400F31C03 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E1D122916BBD400F31C03 /* ErrorType.swift */; };
 		54AD2A6929144094005CF7DE /* RemoteLiveDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A6829144094005CF7DE /* RemoteLiveDataLoader.swift */; };
 		54AD2A6B291444E2005CF7DE /* LiveDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A6A291444E2005CF7DE /* LiveDataMapper.swift */; };
 		54AD2A6D291454AB005CF7DE /* live_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 54AD2A6C291454AB005CF7DE /* live_data.json */; };
@@ -109,18 +111,20 @@
 		54767C3D29128BAB002F48E0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localized.strings; sourceTree = "<group>"; };
 		54767C3E29128BB3002F48E0 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localized.strings; sourceTree = "<group>"; };
 		54767C4129128C39002F48E0 /* Localization+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localization+Extension.swift"; sourceTree = "<group>"; };
-		54767C4329128C75002F48E0 /* LocalizedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedConstants.swift; sourceTree = "<group>"; };
+		54767C4329128C75002F48E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		54767C4529128D36002F48E0 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		54767C552912F8E3002F48E0 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		54767C572912F9E4002F48E0 /* LiveDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataViewModel.swift; sourceTree = "<group>"; };
 		54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricDataViewModel.swift; sourceTree = "<group>"; };
 		54767C5B2912FC47002F48E0 /* DashboardComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardComposer.swift; sourceTree = "<group>"; };
+		547E1D122916BBD400F31C03 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		54AD2A6829144094005CF7DE /* RemoteLiveDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLiveDataLoader.swift; sourceTree = "<group>"; };
 		54AD2A6A291444E2005CF7DE /* LiveDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataMapper.swift; sourceTree = "<group>"; };
 		54AD2A6C291454AB005CF7DE /* live_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = live_data.json; sourceTree = "<group>"; };
 		54AD2A6E29145EE3005CF7DE /* MockHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
 		54AD2A7029151F11005CF7DE /* DetailGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGraphView.swift; sourceTree = "<group>"; };
 		54AD2A72291527F4005CF7DE /* DetailGraphComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGraphComposer.swift; sourceTree = "<group>"; };
+		54AD2A782916996C005CF7DE /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,10 +242,9 @@
 		54767BB529117584002F48E0 /* EnergyMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				54767C3729128AFC002F48E0 /* Resources */,
 				54767C212912778B002F48E0 /* Modules */,
+				54767C3729128AFC002F48E0 /* Resources */,
 				54767BB629117584002F48E0 /* EnergyMonitorApp.swift */,
-				54767BBA29117585002F48E0 /* Assets.xcassets */,
 				54767BBC29117585002F48E0 /* Preview Content */,
 			);
 			path = EnergyMonitor;
@@ -266,6 +269,7 @@
 		54767C07291276D7002F48E0 /* EnergyDataFeature */ = {
 			isa = PBXGroup;
 			children = (
+				547E1D0F2916A02000F31C03 /* Resources */,
 				54767C2529127A52002F48E0 /* Live Data API */,
 				54767C24291278E4002F48E0 /* Historic Data API */,
 				5449DFD929130CA200F706B0 /* Cache */,
@@ -384,7 +388,9 @@
 		54767C3729128AFC002F48E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				547E1D112916BBC000F31C03 /* Errors */,
 				54767C3F29128C0F002F48E0 /* Localization */,
+				54767BBA29117585002F48E0 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -394,7 +400,7 @@
 			children = (
 				54767C4029128C24002F48E0 /* Helper */,
 				54767C3C29128B6C002F48E0 /* Localized.strings */,
-				54767C4329128C75002F48E0 /* LocalizedConstants.swift */,
+				54767C4329128C75002F48E0 /* Constants.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -405,6 +411,22 @@
 				54767C4129128C39002F48E0 /* Localization+Extension.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		547E1D0F2916A02000F31C03 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54AD2A7729169951005CF7DE /* Errors */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		547E1D112916BBC000F31C03 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				547E1D122916BBD400F31C03 /* ErrorType.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		54AD2A742915628E005CF7DE /* LiveData */ = {
@@ -421,6 +443,14 @@
 				54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */,
 			);
 			path = HistoricData;
+			sourceTree = "<group>";
+		};
+		54AD2A7729169951005CF7DE /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				54AD2A782916996C005CF7DE /* AppError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,7 +653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54767C5C2912FC47002F48E0 /* DashboardComposer.swift in Sources */,
-				54767C4429128C75002F48E0 /* LocalizedConstants.swift in Sources */,
+				54767C4429128C75002F48E0 /* Constants.swift in Sources */,
 				54AD2A6F29145EE3005CF7DE /* MockHTTPClient.swift in Sources */,
 				54767C5A2912FA36002F48E0 /* HistoricDataViewModel.swift in Sources */,
 				54767C582912F9E4002F48E0 /* LiveDataViewModel.swift in Sources */,
@@ -632,6 +662,7 @@
 				54AD2A73291527F4005CF7DE /* DetailGraphComposer.swift in Sources */,
 				54767C562912F8E3002F48E0 /* DashboardViewModel.swift in Sources */,
 				54AD2A7129151F11005CF7DE /* DetailGraphView.swift in Sources */,
+				547E1D132916BBD400F31C03 /* ErrorType.swift in Sources */,
 				54767BB729117584002F48E0 /* EnergyMonitorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,6 +685,7 @@
 				5449DFE32913126C00F706B0 /* HistoryMapper.swift in Sources */,
 				5449DFDF29130D5F00F706B0 /* EnergyDataModel.xcdatamodeld in Sources */,
 				54767C3429128365002F48E0 /* HistoryLoader.swift in Sources */,
+				547E1D102916B0B100F31C03 /* AppError.swift in Sources */,
 				54AD2A6929144094005CF7DE /* RemoteLiveDataLoader.swift in Sources */,
 				54767C2929127B41002F48E0 /* HTTPClient.swift in Sources */,
 				54767C322912834F002F48E0 /* LiveData.swift in Sources */,

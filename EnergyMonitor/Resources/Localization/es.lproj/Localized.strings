@@ -1,1 +1,4 @@
 "Dashboard" = "Tablero";
+"Decoding Error" = "Error de Decodificación";
+"Network Error" = "Error de Red";
+"Database Error" = "Error de Base de Datos";

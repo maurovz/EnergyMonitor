@@ -18,37 +18,51 @@ struct DashboardView: View {
           HStack {
             SquareWidgetView(
               title: "Discharged Energy",
-              value: "\(String(format: "%.2f", viewModel.totalDischargedPower)) KW",
+              value: "\(String(format: "%.2f", viewModel.totalDischargedPower)) \(Constants.energyUnit)",
               background: .blue)
-              .padding([.top, .leading])
+            .padding([.top, .leading])
             SquareWidgetView(
               title: "Charged Energy",
-              value: "\(String(format: "%.2f", viewModel.totalChargedPower)) KW",
+              value: "\(String(format: "%.2f", viewModel.totalChargedPower)) \(Constants.energyUnit)",
               background: .red)
-              .padding([.top, .trailing])
+            .padding([.top, .trailing])
           }
 
           RectangleWidgetView(values: [
             RectangleWidgetView.DisplayValue(
-              title: "Solar Power", amount: viewModel.liveDataViewModel.solarPower),
+              title: "Solar Power",
+              amount: "\(viewModel.liveDataViewModel.solarPower) \(Constants.energyUnit)"),
             RectangleWidgetView.DisplayValue(
-              title: "Quasar Power", amount: viewModel.liveDataViewModel.quasarPower),
+              title: "Quasar Power",
+              amount: "\(viewModel.liveDataViewModel.quasarPower) \(Constants.energyUnit)"),
             RectangleWidgetView.DisplayValue(
-              title: "Building Demand", amount: viewModel.liveDataViewModel.buildingDemand),
-            RectangleWidgetView.DisplayValue(
-              title: "System Soc", amount: viewModel.liveDataViewModel.systemSoc)
+              title: "Grid Power",
+              amount: "\(viewModel.liveDataViewModel.gridPower) \(Constants.energyUnit)")
           ], background: .purple)
-            .padding([.top, .leading, .trailing])
+          .padding([.top, .leading, .trailing])
 
           NavigationLink(destination: DetailGraphComposer.createModule(historicData: viewModel.historicData)) {
             RectangleWidgetView(values: [
-              RectangleWidgetView.DisplayValue(title: "Solar Power", amount: viewModel.liveDataViewModel.solarPower),
-              RectangleWidgetView.DisplayValue(title: "QuasarPower", amount: viewModel.liveDataViewModel.quasarPower),
-              RectangleWidgetView.DisplayValue(title: "Building Demand", amount: viewModel.liveDataViewModel.buildingDemand),
-              RectangleWidgetView.DisplayValue(title: "System Soc", amount: viewModel.liveDataViewModel.systemSoc)
+              RectangleWidgetView.DisplayValue(
+                title: "Solar Power",
+                amount: "\(viewModel.liveDataViewModel.solarPowerPercent) \(Constants.percentageString)"),
+
+              RectangleWidgetView.DisplayValue(
+                title: "Quasar Power",
+                amount: "\(viewModel.liveDataViewModel.quasarPowerPercent) \(Constants.percentageString)"),
+
+              RectangleWidgetView.DisplayValue(
+                title: "Grid Power",
+                amount: "\(viewModel.liveDataViewModel.gridPowerPercent) \(Constants.percentageString)")
             ], background: .orange)
-              .padding()
+            .padding()
           }
+        }
+        .alert(isPresented: $viewModel.showError) {
+          Alert(
+            title: Text("Error"),
+            message: Text(viewModel.appError?.errorDescription ?? ""),
+            dismissButton: .default(Text("Aceptar")))
         }
       }
     }
@@ -71,7 +85,7 @@ struct SquareWidgetView: View {
       HStack {
         Text(title)
           .font(.system(size: 18, weight: .medium))
-        .foregroundColor(.white)
+          .foregroundColor(.white)
         Spacer()
       }
       .padding()
@@ -108,7 +122,7 @@ struct RectangleWidgetView: View {
 
             HStack {
               Text(value.amount)
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: 16, weight: .bold))
                 .foregroundColor(.white)
             }
           }
