@@ -1,4 +1,4 @@
-public struct History {
+public struct History: Equatable {
   public let buildingPower: Decimal
   public let gridPower: Decimal
   public let pvPower: Decimal
