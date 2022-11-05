@@ -66,16 +66,17 @@ public final class LiveDataViewModel: Identifiable, ObservableObject {
     self.liveDataLoader = liveDataLoader
   }
 
-  public func fetch(completion: @escaping (Bool) -> Void) {
+  public func fetch(completion: @escaping (Result<LiveData, any Error>) -> Void) {
     liveDataLoader.load {[weak self] result in
       guard let self = self else { return }
 
       switch result {
       case .success(let data):
         self.liveData = data
+        completion(result)
 
       case .failure:
-        completion(false)
+        completion(result)
       }
     }
   }

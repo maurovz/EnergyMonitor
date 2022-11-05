@@ -9,6 +9,8 @@ final class DashboardViewModel: ObservableObject {
   @Published var liveDataViewModel: LiveDataViewModel
   @Published var totalChargedPower: Double = 0
   @Published var totalDischargedPower: Double = 0
+  @Published var appError: ErrorType?
+  @Published var showError = false
 
   init(historyLoader: HistoryLoader, liveDataViewModel: LiveDataViewModel) {
     self.historyLoader = historyLoader
@@ -16,12 +18,23 @@ final class DashboardViewModel: ObservableObject {
     fetchData()
   }
 
-  func fetchData() {
-    liveDataViewModel.fetch { _ in }
+  private func fetchData() {
     fetchHistoricData { _ in }
+
+    liveDataViewModel.fetch {[weak self] result in
+      guard let self = self else { return }
+
+      switch result {
+      case .failure:
+        self.appError = .init(error: AppError.networkError)
+        self.showError = true
+      default:
+        return
+      }
+    }
   }
 
-  public func fetchHistoricData(completion: @escaping (Bool) -> Void) {
+  private func fetchHistoricData(completion: @escaping (Result<[HistoricDataViewModel], AppError>) -> Void) {
     historyLoader.load { [weak self] result in
       guard let self = self else { return }
 
@@ -29,25 +42,28 @@ final class DashboardViewModel: ObservableObject {
       case .success(let data):
         self.historicData = data.map { HistoricDataViewModel(historicData: $0) }
         self.setupView()
-        completion(true)
+        completion(.success(self.historicData))
 
       case .failure:
-        completion(false)
+        self.appError = .init(error: AppError.networkError)
+        completion(.failure(AppError.networkError))
       }
     }
   }
+}
 
-  private func setupView() {
+private extension DashboardViewModel {
+  func setupView() {
     totalChargedPower = getTotalChargedPower()
     totalDischargedPower = getTotalDisChargedPower()
   }
 
-  private func getTotalChargedPower() -> Double {
+  func getTotalChargedPower() -> Double {
     let value = historicData.filter { $0.quasarsPower > 0 }.map { $0.quasarsPower }.reduce(0, +)
     return Double(truncating: value as NSNumber)
   }
 
-  private func getTotalDisChargedPower() -> Double {
+  func getTotalDisChargedPower() -> Double {
     let value = historicData.filter { $0.quasarsPower < 0 }.map { $0.quasarsPower }.reduce(0, +)
     return Double(truncating: value as NSNumber)
   }

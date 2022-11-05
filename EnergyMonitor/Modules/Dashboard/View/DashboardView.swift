@@ -1,5 +1,27 @@
 import SwiftUI
 
+enum AppError: Error, LocalizedError {
+  case decodeError
+  case networkError
+  case databaseError
+
+  var errorDescription: String? {
+    switch self {
+    case .decodeError:
+      return NSLocalizedString("Decoding Error", comment: "")
+    case .networkError:
+      return NSLocalizedString("Network Error", comment: "")
+    case .databaseError:
+      return NSLocalizedString("Database Error", comment: "")
+    }
+  }
+}
+
+struct ErrorType: Identifiable {
+  let id = UUID()
+  let error: AppError
+}
+
 struct DashboardView: View {
   private static let energyUnit = "kW"
   private static let percentageString = "%"
@@ -23,12 +45,12 @@ struct DashboardView: View {
               title: "Discharged Energy",
               value: "\(String(format: "%.2f", viewModel.totalDischargedPower)) \(Self.energyUnit)",
               background: .blue)
-              .padding([.top, .leading])
+            .padding([.top, .leading])
             SquareWidgetView(
               title: "Charged Energy",
               value: "\(String(format: "%.2f", viewModel.totalChargedPower)) \(Self.energyUnit)",
               background: .red)
-              .padding([.top, .trailing])
+            .padding([.top, .trailing])
           }
 
           RectangleWidgetView(values: [
@@ -42,7 +64,7 @@ struct DashboardView: View {
               title: "Grid Power",
               amount: "\(viewModel.liveDataViewModel.gridPower) \(Self.energyUnit)")
           ], background: .purple)
-            .padding([.top, .leading, .trailing])
+          .padding([.top, .leading, .trailing])
 
           NavigationLink(destination: DetailGraphComposer.createModule(historicData: viewModel.historicData)) {
             RectangleWidgetView(values: [
@@ -58,8 +80,14 @@ struct DashboardView: View {
                 title: "Grid Power",
                 amount: "\(viewModel.liveDataViewModel.gridPowerPercent) \(Self.percentageString)")
             ], background: .orange)
-              .padding()
+            .padding()
           }
+        }
+        .alert(isPresented: $viewModel.showError) {
+          Alert(
+            title: Text("Error"),
+            message: Text(viewModel.appError?.error.errorDescription ?? ""),
+            dismissButton: .default(Text("Aceptar")))
         }
       }
     }
@@ -82,7 +110,7 @@ struct SquareWidgetView: View {
       HStack {
         Text(title)
           .font(.system(size: 18, weight: .medium))
-        .foregroundColor(.white)
+          .foregroundColor(.white)
         Spacer()
       }
       .padding()
