@@ -16,7 +16,7 @@ class HistoricDataMapperTest: XCTestCase {
       quasarsPower: 70,
       timeStamp: "2021-09-27T16:06:00+00:00")
 
-    let result = try HistoryMapper.map(data: makeJSON(value.json))
+    let result = try HistoryMapper.map(data: makeArrayJSON(value.json))
 
     XCTAssertEqual(result, value.model)
   }

@@ -44,7 +44,7 @@ class LoadHistoricDataFromRemoteUseCaseTests: XCTestCase {
       timeStamp: "2021-09-27T16:06:00+00:00")
 
     expect(sut, completesWith: .success(value.model), when: {
-      let json = makeJSON(value.json)
+      let json = makeArrayJSON(value.json)
       client.complete(withStatusCode: 200, data: json)
     })
   }

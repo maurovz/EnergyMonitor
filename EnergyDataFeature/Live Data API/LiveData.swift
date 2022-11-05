@@ -1,4 +1,4 @@
-public struct LiveData {
+public struct LiveData: Equatable {
   public let solarPower: Double
   public let quasarPower: Double
   public let gridPower: Double

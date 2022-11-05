@@ -32,7 +32,43 @@ func makeHistoricData(
   return ([model], json)
 }
 
-func makeJSON(_ data: [String: Any]) -> Data {
-  let root = [data]
-  return try! JSONSerialization.data(withJSONObject: root)
+func makeLiveData(
+  solarPower: Double,
+  quasarPower: Double,
+  gridPower: Double,
+  buildingDemand: Double,
+  systemSoc: Double,
+  totalEnergy: Double,
+  currentEnergy: Double
+) -> (model: LiveData, json: [String: Any]) {
+
+  let json: [String: Any] = [
+    "solar_power": solarPower,
+    "quasars_power": quasarPower,
+    "grid_power": gridPower,
+    "building_demand": buildingDemand,
+    "system_soc": systemSoc,
+    "total_energy": totalEnergy,
+    "current_energy": currentEnergy
+  ]
+
+  let model = LiveData(
+    solarPower: solarPower,
+    quasarPower: quasarPower,
+    gridPower: gridPower,
+    buildingDemand: buildingDemand,
+    systemSoc: systemSoc,
+    totalEnergy: totalEnergy,
+    currentEnergy: currentEnergy)
+
+  return (model, json)
 }
+
+func makeArrayJSON(_ data: [String: Any]) -> Data {
+  try! JSONSerialization.data(withJSONObject: [data])
+}
+
+func makeJSON(_ data: [String: Any]) -> Data {
+  try! JSONSerialization.data(withJSONObject: data)
+}
+
