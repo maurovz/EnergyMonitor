@@ -42,6 +42,7 @@
 		54AD2A6F29145EE3005CF7DE /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A6E29145EE3005CF7DE /* MockHTTPClient.swift */; };
 		54AD2A7129151F11005CF7DE /* DetailGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A7029151F11005CF7DE /* DetailGraphView.swift */; };
 		54AD2A73291527F4005CF7DE /* DetailGraphComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A72291527F4005CF7DE /* DetailGraphComposer.swift */; };
+		54AD2A792916996C005CF7DE /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A782916996C005CF7DE /* AppError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		54AD2A6E29145EE3005CF7DE /* MockHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
 		54AD2A7029151F11005CF7DE /* DetailGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGraphView.swift; sourceTree = "<group>"; };
 		54AD2A72291527F4005CF7DE /* DetailGraphComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGraphComposer.swift; sourceTree = "<group>"; };
+		54AD2A782916996C005CF7DE /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,10 +240,9 @@
 		54767BB529117584002F48E0 /* EnergyMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				54767C3729128AFC002F48E0 /* Resources */,
 				54767C212912778B002F48E0 /* Modules */,
+				54767C3729128AFC002F48E0 /* Resources */,
 				54767BB629117584002F48E0 /* EnergyMonitorApp.swift */,
-				54767BBA29117585002F48E0 /* Assets.xcassets */,
 				54767BBC29117585002F48E0 /* Preview Content */,
 			);
 			path = EnergyMonitor;
@@ -385,6 +386,8 @@
 			isa = PBXGroup;
 			children = (
 				54767C3F29128C0F002F48E0 /* Localization */,
+				54AD2A7729169951005CF7DE /* Errors */,
+				54767BBA29117585002F48E0 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -421,6 +424,14 @@
 				54767C592912FA36002F48E0 /* HistoricDataViewModel.swift */,
 			);
 			path = HistoricData;
+			sourceTree = "<group>";
+		};
+		54AD2A7729169951005CF7DE /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				54AD2A782916996C005CF7DE /* AppError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -630,6 +641,7 @@
 				54767C4229128C39002F48E0 /* Localization+Extension.swift in Sources */,
 				54767C4629128D36002F48E0 /* DashboardView.swift in Sources */,
 				54AD2A73291527F4005CF7DE /* DetailGraphComposer.swift in Sources */,
+				54AD2A792916996C005CF7DE /* AppError.swift in Sources */,
 				54767C562912F8E3002F48E0 /* DashboardViewModel.swift in Sources */,
 				54AD2A7129151F11005CF7DE /* DetailGraphView.swift in Sources */,
 				54767BB729117584002F48E0 /* EnergyMonitorApp.swift in Sources */,

@@ -1,27 +1,5 @@
 import SwiftUI
 
-enum AppError: Error, LocalizedError {
-  case decodeError
-  case networkError
-  case databaseError
-
-  var errorDescription: String? {
-    switch self {
-    case .decodeError:
-      return NSLocalizedString("Decoding Error", comment: "")
-    case .networkError:
-      return NSLocalizedString("Network Error", comment: "")
-    case .databaseError:
-      return NSLocalizedString("Database Error", comment: "")
-    }
-  }
-}
-
-struct ErrorType: Identifiable {
-  let id = UUID()
-  let error: AppError
-}
-
 struct DashboardView: View {
   private static let energyUnit = "kW"
   private static let percentageString = "%"

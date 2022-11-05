@@ -1,1 +1,4 @@
 "Dashboard" = "Panell";
+"Decoding Error" = "Error de Descodificació";
+"Network Error" = "Error de Connexió";
+"Database Error" = "Error de Base de Dades";
