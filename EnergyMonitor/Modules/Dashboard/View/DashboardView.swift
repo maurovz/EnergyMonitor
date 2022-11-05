@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct DashboardView: View {
+  private static let energyUnit = "kW"
+  private static let percentageString = "%"
+
   @ObservedObject var viewModel: DashboardViewModel
 
   init(viewModel: DashboardViewModel) {
@@ -18,34 +21,42 @@ struct DashboardView: View {
           HStack {
             SquareWidgetView(
               title: "Discharged Energy",
-              value: "\(String(format: "%.2f", viewModel.totalDischargedPower)) KW",
+              value: "\(String(format: "%.2f", viewModel.totalDischargedPower)) \(Self.energyUnit)",
               background: .blue)
               .padding([.top, .leading])
             SquareWidgetView(
               title: "Charged Energy",
-              value: "\(String(format: "%.2f", viewModel.totalChargedPower)) KW",
+              value: "\(String(format: "%.2f", viewModel.totalChargedPower)) \(Self.energyUnit)",
               background: .red)
               .padding([.top, .trailing])
           }
 
           RectangleWidgetView(values: [
             RectangleWidgetView.DisplayValue(
-              title: "Solar Power", amount: viewModel.liveDataViewModel.solarPower),
+              title: "Solar Power",
+              amount: "\(viewModel.liveDataViewModel.solarPower) \(Self.energyUnit)"),
             RectangleWidgetView.DisplayValue(
-              title: "Quasar Power", amount: viewModel.liveDataViewModel.quasarPower),
+              title: "Quasar Power",
+              amount: "\(viewModel.liveDataViewModel.quasarPower) \(Self.energyUnit)"),
             RectangleWidgetView.DisplayValue(
-              title: "Building Demand", amount: viewModel.liveDataViewModel.buildingDemand),
-            RectangleWidgetView.DisplayValue(
-              title: "System Soc", amount: viewModel.liveDataViewModel.systemSoc)
+              title: "Grid Power",
+              amount: "\(viewModel.liveDataViewModel.gridPower) \(Self.energyUnit)")
           ], background: .purple)
             .padding([.top, .leading, .trailing])
 
           NavigationLink(destination: DetailGraphComposer.createModule(historicData: viewModel.historicData)) {
             RectangleWidgetView(values: [
-              RectangleWidgetView.DisplayValue(title: "Solar Power", amount: viewModel.liveDataViewModel.solarPower),
-              RectangleWidgetView.DisplayValue(title: "QuasarPower", amount: viewModel.liveDataViewModel.quasarPower),
-              RectangleWidgetView.DisplayValue(title: "Building Demand", amount: viewModel.liveDataViewModel.buildingDemand),
-              RectangleWidgetView.DisplayValue(title: "System Soc", amount: viewModel.liveDataViewModel.systemSoc)
+              RectangleWidgetView.DisplayValue(
+                title: "Solar Power",
+                amount: "\(viewModel.liveDataViewModel.solarPowerPercent) \(Self.percentageString)"),
+
+              RectangleWidgetView.DisplayValue(
+                title: "Quasar Power",
+                amount: "\(viewModel.liveDataViewModel.quasarPowerPercent) \(Self.percentageString)"),
+
+              RectangleWidgetView.DisplayValue(
+                title: "Grid Power",
+                amount: "\(viewModel.liveDataViewModel.gridPowerPercent) \(Self.percentageString)")
             ], background: .orange)
               .padding()
           }
@@ -108,7 +119,7 @@ struct RectangleWidgetView: View {
 
             HStack {
               Text(value.amount)
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: 16, weight: .bold))
                 .foregroundColor(.white)
             }
           }
