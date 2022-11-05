@@ -64,6 +64,7 @@ func makeLiveData(
   return (model, json)
 }
 
+// swiftlint:disable force_try
 func makeArrayJSON(_ data: [String: Any]) -> Data {
   try! JSONSerialization.data(withJSONObject: [data])
 }
@@ -71,4 +72,3 @@ func makeArrayJSON(_ data: [String: Any]) -> Data {
 func makeJSON(_ data: [String: Any]) -> Data {
   try! JSONSerialization.data(withJSONObject: data)
 }
-
