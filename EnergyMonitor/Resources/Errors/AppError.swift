@@ -8,11 +8,11 @@ enum AppError: Error, LocalizedError {
   var errorDescription: String? {
     switch self {
     case .decodeError:
-      return LocalizedConstants.decodingError
+      return Constants.decodingError
     case .networkError:
-      return LocalizedConstants.networkError
+      return Constants.networkError
     case .databaseError:
-      return LocalizedConstants.databaseError
+      return Constants.databaseError
     }
   }
 }

@@ -1,9 +1,6 @@
 import SwiftUI
 
 struct DashboardView: View {
-  private static let energyUnit = "kW"
-  private static let percentageString = "%"
-
   @ObservedObject var viewModel: DashboardViewModel
 
   init(viewModel: DashboardViewModel) {
@@ -21,12 +18,12 @@ struct DashboardView: View {
           HStack {
             SquareWidgetView(
               title: "Discharged Energy",
-              value: "\(String(format: "%.2f", viewModel.totalDischargedPower)) \(Self.energyUnit)",
+              value: "\(String(format: "%.2f", viewModel.totalDischargedPower)) \(Constants.energyUnit)",
               background: .blue)
             .padding([.top, .leading])
             SquareWidgetView(
               title: "Charged Energy",
-              value: "\(String(format: "%.2f", viewModel.totalChargedPower)) \(Self.energyUnit)",
+              value: "\(String(format: "%.2f", viewModel.totalChargedPower)) \(Constants.energyUnit)",
               background: .red)
             .padding([.top, .trailing])
           }
@@ -34,13 +31,13 @@ struct DashboardView: View {
           RectangleWidgetView(values: [
             RectangleWidgetView.DisplayValue(
               title: "Solar Power",
-              amount: "\(viewModel.liveDataViewModel.solarPower) \(Self.energyUnit)"),
+              amount: "\(viewModel.liveDataViewModel.solarPower) \(Constants.energyUnit)"),
             RectangleWidgetView.DisplayValue(
               title: "Quasar Power",
-              amount: "\(viewModel.liveDataViewModel.quasarPower) \(Self.energyUnit)"),
+              amount: "\(viewModel.liveDataViewModel.quasarPower) \(Constants.energyUnit)"),
             RectangleWidgetView.DisplayValue(
               title: "Grid Power",
-              amount: "\(viewModel.liveDataViewModel.gridPower) \(Self.energyUnit)")
+              amount: "\(viewModel.liveDataViewModel.gridPower) \(Constants.energyUnit)")
           ], background: .purple)
           .padding([.top, .leading, .trailing])
 
@@ -48,15 +45,15 @@ struct DashboardView: View {
             RectangleWidgetView(values: [
               RectangleWidgetView.DisplayValue(
                 title: "Solar Power",
-                amount: "\(viewModel.liveDataViewModel.solarPowerPercent) \(Self.percentageString)"),
+                amount: "\(viewModel.liveDataViewModel.solarPowerPercent) \(Constants.percentageString)"),
 
               RectangleWidgetView.DisplayValue(
                 title: "Quasar Power",
-                amount: "\(viewModel.liveDataViewModel.quasarPowerPercent) \(Self.percentageString)"),
+                amount: "\(viewModel.liveDataViewModel.quasarPowerPercent) \(Constants.percentageString)"),
 
               RectangleWidgetView.DisplayValue(
                 title: "Grid Power",
-                amount: "\(viewModel.liveDataViewModel.gridPowerPercent) \(Self.percentageString)")
+                amount: "\(viewModel.liveDataViewModel.gridPowerPercent) \(Constants.percentageString)")
             ], background: .orange)
             .padding()
           }
