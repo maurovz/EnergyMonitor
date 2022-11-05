@@ -61,7 +61,7 @@ struct DashboardView: View {
         .alert(isPresented: $viewModel.showError) {
           Alert(
             title: Text("Error"),
-            message: Text(viewModel.appError?.error.errorDescription ?? ""),
+            message: Text(viewModel.appError?.errorDescription ?? ""),
             dismissButton: .default(Text("Aceptar")))
         }
       }

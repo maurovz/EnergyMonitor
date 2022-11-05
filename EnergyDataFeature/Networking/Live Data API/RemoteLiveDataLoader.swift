@@ -18,17 +18,17 @@ public final class RemoteLiveDataLoader: LiveDataLoader {
       switch result {
       case .success((let data, _)):
         guard let mappedLiveData = try? LiveDataMapper.map(data: data) else {
-          completion(.failure(LiveDataMapper.Error.invalidData))
+          completion(.failure(EnergyDataError.decodeError))
           return
         }
 
         self.setCache(data: mappedLiveData)
         completion(.success(mappedLiveData))
 
-      case .failure(let error):
+      case .failure:
 //        let cacheHistory = self.cache.loadLiveDataFromCoreData()
 //        guard !cacheHistory.isEmpty else {
-          completion(.failure(error))
+        completion(.failure(.networkError))
 //          return
 //        }
 //

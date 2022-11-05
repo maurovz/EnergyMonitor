@@ -1,4 +1,5 @@
 import Foundation
+import EnergyDataFeature
 
 struct Constants {
   static let dashboard = "Dashboard".localized

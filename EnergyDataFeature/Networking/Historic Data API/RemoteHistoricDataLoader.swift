@@ -18,17 +18,17 @@ public final class RemoteHistoricDataLoader: HistoryLoader {
       switch result {
       case .success((let data, _)):
         guard let mappedHistory = try? HistoryMapper.map(data: data) else {
-          completion(.failure(HistoryMapper.Error.invalidData))
+          completion(.failure(EnergyDataError.decodeError))
           return
         }
 
         self.setCache(data: mappedHistory)
         completion(.success(mappedHistory))
 
-      case .failure(let error):
+      case .failure:
         let cacheHistory = self.cache.loadHistoricDataFromCoreData()
         guard !cacheHistory.isEmpty else {
-          completion(.failure(error))
+          completion(.failure(.networkError))
           return
         }
 

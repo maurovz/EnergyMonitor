@@ -19,14 +19,38 @@ final class DashboardViewModel: ObservableObject {
   }
 
   private func fetchData() {
-    fetchHistoricData { _ in }
+    fetchHistoricData()
+    fetchLiveData()
+  }
+}
 
+private extension DashboardViewModel {
+  private func fetchHistoricData() {
+    historyLoader.load { [weak self] result in
+      guard let self = self else { return }
+
+      switch result {
+      case .success(let data):
+        self.historicData = data.map { HistoricDataViewModel(historicData: $0) }
+        self.setupView(
+          totalCharged: self.getTotalChargedPower(),
+          totalDischarged: self.getTotalDisChargedPower()
+        )
+
+      case .failure(let error):
+        self.appError = .init(error: error)
+        self.showError = true
+      }
+    }
+  }
+
+  private func fetchLiveData() {
     liveDataViewModel.fetch {[weak self] result in
       guard let self = self else { return }
 
       switch result {
-      case .failure:
-        self.appError = .init(error: AppError.networkError)
+      case .failure(let error):
+        self.appError = .init(error: error)
         self.showError = true
       default:
         return
@@ -34,28 +58,9 @@ final class DashboardViewModel: ObservableObject {
     }
   }
 
-  private func fetchHistoricData(completion: @escaping (Result<[HistoricDataViewModel], AppError>) -> Void) {
-    historyLoader.load { [weak self] result in
-      guard let self = self else { return }
-
-      switch result {
-      case .success(let data):
-        self.historicData = data.map { HistoricDataViewModel(historicData: $0) }
-        self.setupView()
-        completion(.success(self.historicData))
-
-      case .failure:
-        self.appError = .init(error: AppError.networkError)
-        completion(.failure(AppError.networkError))
-      }
-    }
-  }
-}
-
-private extension DashboardViewModel {
-  func setupView() {
-    totalChargedPower = getTotalChargedPower()
-    totalDischargedPower = getTotalDisChargedPower()
+  func setupView(totalCharged: Double, totalDischarged: Double) {
+    totalChargedPower = totalCharged
+    totalDischargedPower = abs(totalDischarged)
   }
 
   func getTotalChargedPower() -> Double {

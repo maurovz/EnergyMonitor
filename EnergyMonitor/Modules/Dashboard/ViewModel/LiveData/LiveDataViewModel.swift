@@ -66,7 +66,7 @@ public final class LiveDataViewModel: Identifiable, ObservableObject {
     self.liveDataLoader = liveDataLoader
   }
 
-  public func fetch(completion: @escaping (Result<LiveData, any Error>) -> Void) {
+  public func fetch(completion: @escaping (Result<LiveData, EnergyDataError>) -> Void) {
     liveDataLoader.load {[weak self] result in
       guard let self = self else { return }
 
