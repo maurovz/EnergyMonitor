@@ -38,7 +38,7 @@ public final class RemoteLiveDataLoader: LiveDataLoader {
   }
 
   private func setCache(data: LiveData) {
-    cache.deleteHistoryEntityFromCoreData()
+    cache.deleteLiveDataEntityFromCoreData()
     cache.saveLiveDataToCache(data: data)
   }
 }
