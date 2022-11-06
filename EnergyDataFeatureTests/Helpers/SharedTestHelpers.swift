@@ -2,10 +2,10 @@ import Foundation
 import EnergyDataFeature
 
 func makeHistoricData(
-  buildingPower: Decimal,
-  gridPower: Decimal,
-  pvPower: Decimal,
-  quasarsPower: Decimal,
+  buildingPower: Double,
+  gridPower: Double,
+  pvPower: Double,
+  quasarsPower: Double,
   timeStamp: String
 ) -> (model: [History], json: [String: Any]) {
 
@@ -32,6 +32,7 @@ func makeHistoricData(
   return ([model], json)
 }
 
+// swiftlint:disable function_parameter_count
 func makeLiveData(
   solarPower: Double,
   quasarPower: Double,
