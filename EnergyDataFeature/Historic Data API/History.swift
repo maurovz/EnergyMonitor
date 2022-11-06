@@ -1,15 +1,15 @@
 public struct History: Equatable {
-  public let buildingPower: Decimal
-  public let gridPower: Decimal
-  public let pvPower: Decimal
-  public let quasarsPower: Decimal
+  public let buildingPower: Double
+  public let gridPower: Double
+  public let pvPower: Double
+  public let quasarsPower: Double
   public let timeStamp: Date
 
   public init(
-    buildingPower: Decimal,
-    gridPower: Decimal,
-    pvPower: Decimal,
-    quasarsPower: Decimal,
+    buildingPower: Double,
+    gridPower: Double,
+    pvPower: Double,
+    quasarsPower: Double,
     timeStamp: Date) {
       self.buildingPower = buildingPower
       self.gridPower = gridPower

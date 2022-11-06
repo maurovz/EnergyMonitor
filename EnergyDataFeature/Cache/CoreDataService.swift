@@ -8,10 +8,10 @@ public struct CoreDataServices {
 
     for history in data {
       let entity = HistoryEntity(context: context)
-      entity.buildingPower = NSDecimalNumber(decimal: history.buildingPower)
-      entity.gridPower = NSDecimalNumber(decimal: history.gridPower)
-      entity.pvPower = NSDecimalNumber(decimal: history.pvPower)
-      entity.quasarsPower = NSDecimalNumber(decimal: history.quasarsPower)
+      entity.buildingPower = history.buildingPower
+      entity.gridPower = history.gridPower
+      entity.pvPower = history.pvPower
+      entity.quasarsPower = history.quasarsPower
       entity.timeStamp = history.timeStamp
       CoreDataStack.saveContext()
     }
@@ -22,22 +22,12 @@ public struct CoreDataServices {
     var historicData: [History] = []
 
     for entity in entities {
-      guard
-        let buildingPower = entity.buildingPower,
-        let gridPower = entity.gridPower,
-        let pvPower = entity.pvPower,
-        let quasarsPower = entity.quasarsPower,
-        let timeStamp = entity.timeStamp
-      else {
-        continue
-      }
-
       historicData.append(History(
-        buildingPower: buildingPower as Decimal,
-        gridPower: gridPower as Decimal,
-        pvPower: pvPower as Decimal,
-        quasarsPower: quasarsPower as Decimal,
-        timeStamp: timeStamp))
+        buildingPower: entity.buildingPower,
+        gridPower: entity.gridPower,
+        pvPower: entity.pvPower,
+        quasarsPower: entity.quasarsPower,
+        timeStamp: entity.timeStamp ?? Date()))
     }
 
     return historicData
