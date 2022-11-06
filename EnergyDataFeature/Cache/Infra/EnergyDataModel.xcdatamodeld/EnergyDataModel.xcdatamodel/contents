@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="HistoryEntity" representedClassName="HistoryEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="attribute" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <attribute name="buildingPower" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <attribute name="gridPower" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <attribute name="pvPower" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <attribute name="quasarsPower" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="HistoryEntity" representedClassName=".HistoryEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="buildingPower" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="gridPower" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="pvPower" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="quasarsPower" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
-    <entity name="LiveDataEntity" representedClassName="LiveDataEntity" syncable="YES" codeGenerationType="class"/>
-    <elements>
-        <element name="HistoryEntity" positionX="-63" positionY="-18" width="128" height="119"/>
-        <element name="LiveDataEntity" positionX="-54" positionY="-9" width="128" height="29"/>
-    </elements>
+    <entity name="LiveDataEntity" representedClassName="LiveDataEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="buildingDemand" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="currentEnergy" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="gridPower" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="quasarPower" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="solarPower" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="systemSoc" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="totalEnergy" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
 </model>

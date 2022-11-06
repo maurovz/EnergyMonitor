@@ -26,19 +26,19 @@ public final class RemoteLiveDataLoader: LiveDataLoader {
         completion(.success(mappedLiveData))
 
       case .failure:
-//        let cacheHistory = self.cache.loadLiveDataFromCoreData()
-//        guard !cacheHistory.isEmpty else {
+        let cachedLiveData = self.cache.loadLiveDataFromCoreData()
+        guard let liveData = cachedLiveData else {
         completion(.failure(.networkError))
-//          return
-//        }
-//
-//        completion(.success(cacheHistory))
+          return
+        }
+
+        completion(.success(liveData))
       }
     }
   }
 
   private func setCache(data: LiveData) {
-//    cache.deleteHistoryEntityFromCoreData()
-//    cache.saveHistoricDataToCache(data: data)
+    cache.deleteHistoryEntityFromCoreData()
+    cache.saveLiveDataToCache(data: data)
   }
 }

@@ -1,9 +1,12 @@
 import Foundation
 import CoreData
 
+// Subclassing needed for dynamic frameworks.
+class PersistentContainer: NSPersistentContainer { }
+
 class CoreDataStack {
-  static var persistentContainer: NSPersistentContainer = {
-    let container = NSPersistentContainer(name: "EnergyDataModel")
+  static var persistentContainer: PersistentContainer = {
+    let container = PersistentContainer(name: "EnergyDataModel")
     container.loadPersistentStores { (_, error) in
       if let error = error as NSError? {
         fatalError("Unknown database error \(error), \(error.userInfo)")

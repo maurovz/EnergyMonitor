@@ -38,7 +38,7 @@ public final class RemoteHistoricDataLoader: HistoryLoader {
   }
 
   private func setCache(data: [History]) {
-//    cache.deleteHistoryEntityFromCoreData()
-//    cache.saveHistoricDataToCache(data: data)
+    cache.deleteHistoryEntityFromCoreData()
+    cache.saveHistoricDataToCache(data: data)
   }
 }
