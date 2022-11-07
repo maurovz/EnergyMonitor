@@ -8,7 +8,9 @@ final class DashboardViewModel: ObservableObject {
   @Published var historicData: [HistoricDataViewModel] = []
   @Published var liveDataViewModel: LiveDataViewModel
   @Published var totalChargedPower: Double = 0
+  @Published var hourlyChargedPower: Double = 0
   @Published var totalDischargedPower: Double = 0
+  @Published var hourlyDischargedPower: Double = 0
   @Published var appError: ErrorType?
   @Published var showError = false
 
@@ -25,7 +27,7 @@ final class DashboardViewModel: ObservableObject {
 }
 
 private extension DashboardViewModel {
-  private func fetchHistoricData() {
+  func fetchHistoricData() {
     historyLoader.load { [weak self] result in
       guard let self = self else { return }
 
@@ -44,7 +46,7 @@ private extension DashboardViewModel {
     }
   }
 
-  private func fetchLiveData() {
+  func fetchLiveData() {
     liveDataViewModel.fetch {[weak self] result in
       guard let self = self else { return }
 
@@ -66,6 +68,15 @@ private extension DashboardViewModel {
   func getTotalChargedPower() -> Double {
     let value = historicData.filter { $0.quasarsPower > 0 }.map { $0.quasarsPower }.reduce(0, +)
     return Double(truncating: value as NSNumber)
+  }
+
+  func getConsuptionHourlyAverage() -> Double {
+    let groupedDates = Dictionary(grouping: historicData) { value -> DateComponents in
+      let date = Calendar.current.dateComponents([.hour], from: (value.timeStamp))
+      return date
+    }
+
+    return getTotalChargedPower() / Double(groupedDates.count)
   }
 
   func getTotalDisChargedPower() -> Double {

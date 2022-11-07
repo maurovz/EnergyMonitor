@@ -11,40 +11,39 @@ struct DetailGraphView: View {
 
   var body: some View {
     VStack {
-      Text("Detail Data")
       Chart {
         ForEach(historicData) {  data in
           LineMark(
-            x: .value("Time", data.timeStamp),
-            y: .value("Building Power", data.buildingPower),
-            series: .value("Company", "A")
+            x: .value(Constants.time, data.timeStamp),
+            y: .value(Constants.power, data.buildingPower),
+            series: .value("", "A")
           )
           .foregroundStyle(.green)
         }
 
         ForEach(historicData) {  data in
           LineMark(
-            x: .value("Time", data.timeStamp),
-            y: .value("Grid Power", data.gridPower),
-            series: .value("Company", "B")
+            x: .value(Constants.time, data.timeStamp),
+            y: .value(Constants.power, data.gridPower),
+            series: .value("", "B")
           )
           .foregroundStyle(.red)
         }
 
         ForEach(historicData) {  data in
           LineMark(
-            x: .value("Time", data.timeStamp),
-            y: .value("Total Count", data.pvPower),
-            series: .value("Company", "C")
+            x: .value(Constants.time, data.timeStamp),
+            y: .value(Constants.power, data.pvPower),
+            series: .value("", "C")
           )
           .foregroundStyle(.blue)
         }
 
         ForEach(historicData) {  data in
           LineMark(
-            x: .value("Shape Type", data.timeStamp),
-            y: .value("Total Count", data.quasarsPower),
-            series: .value("Company", "D")
+            x: .value(Constants.time, data.timeStamp),
+            y: .value(Constants.power, data.quasarsPower),
+            series: .value("", "D")
           )
           .foregroundStyle(.yellow)
         }

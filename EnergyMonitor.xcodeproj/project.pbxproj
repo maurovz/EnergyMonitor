@@ -43,6 +43,8 @@
 		547E1D1A2916D04500F31C03 /* HistoricDataMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E1D192916D04500F31C03 /* HistoricDataMapperTests.swift */; };
 		547E1D1C2916D16500F31C03 /* LoadLiveDataFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E1D1B2916D16500F31C03 /* LoadLiveDataFromRemoteUseCaseTests.swift */; };
 		547E1D1E2916D6E500F31C03 /* LiveDataMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E1D1D2916D6E500F31C03 /* LiveDataMapperTests.swift */; };
+		547E1D292917E11800F31C03 /* SquareWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E1D282917E11800F31C03 /* SquareWidgetView.swift */; };
+		547E1D2B2917E15000F31C03 /* RectangleWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E1D2A2917E15000F31C03 /* RectangleWidgetView.swift */; };
 		54AD2A6929144094005CF7DE /* RemoteLiveDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A6829144094005CF7DE /* RemoteLiveDataLoader.swift */; };
 		54AD2A6B291444E2005CF7DE /* LiveDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AD2A6A291444E2005CF7DE /* LiveDataMapper.swift */; };
 		54AD2A6D291454AB005CF7DE /* live_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 54AD2A6C291454AB005CF7DE /* live_data.json */; };
@@ -128,6 +130,8 @@
 		547E1D192916D04500F31C03 /* HistoricDataMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricDataMapperTests.swift; sourceTree = "<group>"; };
 		547E1D1B2916D16500F31C03 /* LoadLiveDataFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadLiveDataFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		547E1D1D2916D6E500F31C03 /* LiveDataMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataMapperTests.swift; sourceTree = "<group>"; };
+		547E1D282917E11800F31C03 /* SquareWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareWidgetView.swift; sourceTree = "<group>"; };
+		547E1D2A2917E15000F31C03 /* RectangleWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleWidgetView.swift; sourceTree = "<group>"; };
 		54AD2A6829144094005CF7DE /* RemoteLiveDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLiveDataLoader.swift; sourceTree = "<group>"; };
 		54AD2A6A291444E2005CF7DE /* LiveDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataMapper.swift; sourceTree = "<group>"; };
 		54AD2A6C291454AB005CF7DE /* live_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = live_data.json; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 		5449DFD62912FEF300F706B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				547E1D2C2917E16700F31C03 /* WidgetViews */,
 				54767C4529128D36002F48E0 /* DashboardView.swift */,
 			);
 			path = View;
@@ -452,6 +457,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		547E1D2C2917E16700F31C03 /* WidgetViews */ = {
+			isa = PBXGroup;
+			children = (
+				547E1D282917E11800F31C03 /* SquareWidgetView.swift */,
+				547E1D2A2917E15000F31C03 /* RectangleWidgetView.swift */,
+			);
+			path = WidgetViews;
+			sourceTree = "<group>";
+		};
 		54AD2A742915628E005CF7DE /* LiveData */ = {
 			isa = PBXGroup;
 			children = (
@@ -677,9 +691,11 @@
 			files = (
 				54767C5C2912FC47002F48E0 /* DashboardComposer.swift in Sources */,
 				54767C4429128C75002F48E0 /* Constants.swift in Sources */,
+				547E1D2B2917E15000F31C03 /* RectangleWidgetView.swift in Sources */,
 				54AD2A6F29145EE3005CF7DE /* MockHTTPClient.swift in Sources */,
 				54767C5A2912FA36002F48E0 /* HistoricDataViewModel.swift in Sources */,
 				54767C582912F9E4002F48E0 /* LiveDataViewModel.swift in Sources */,
+				547E1D292917E11800F31C03 /* SquareWidgetView.swift in Sources */,
 				54767C4229128C39002F48E0 /* Localization+Extension.swift in Sources */,
 				54767C4629128D36002F48E0 /* DashboardView.swift in Sources */,
 				54AD2A73291527F4005CF7DE /* DetailGraphComposer.swift in Sources */,
