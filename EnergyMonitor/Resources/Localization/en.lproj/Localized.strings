@@ -2,3 +2,10 @@
 "Decoding Error" = "Decoding Error";
 "Network Error" = "Network Error";
 "Database Error" = "Database Error";
+"Solar Power" = "Solar Power";
+"Quasar Power" = "Quasar Power";
+"Grid Power" = "Grid Power";
+"Discharged Energy" = "Discharged Energy";
+"Charged Energy" = "Charged Energy";
+"Live Data" = "Live Data";
+"Total Consumption" = "Total Consumption";

@@ -2,3 +2,10 @@
 "Decoding Error" = "Error de Decodificación";
 "Network Error" = "Error de Red";
 "Database Error" = "Error de Base de Datos";
+"Solar Power" = "Energía Solar";
+"Quasar Power" = "Energía Quasar";
+"Grid Power" = "Energía de la red";
+"Discharged Energy" = "Energía Descargada";
+"Charged Energy" = "Energía Cargada";
+"Live Data" =  "Datos en Tiempo Real";
+"Total Consumption" = "Consumo Total";

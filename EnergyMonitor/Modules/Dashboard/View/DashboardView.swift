@@ -10,49 +10,52 @@ struct DashboardView: View {
   var body: some View {
     NavigationView {
       ScrollView {
-        Text("Energy Dashboard")
-          .foregroundColor(.white)
-          .font(.system(size: 30, weight: .semibold))
-          .padding()
+        Image("banner")
+          .resizable()
+          .frame(maxWidth: .infinity, maxHeight: 300)
+          .aspectRatio(contentMode: .fit)
+          .cornerRadius(20)
+          .padding([.leading, .trailing], 20)
+
         VStack {
           HStack {
             SquareWidgetView(
               title: "Discharged Energy",
-              value: "\(String(format: "%.2f", viewModel.totalDischargedPower)) \(Constants.energyUnit)",
+              value: "\(String(format: "%.2f", viewModel.totalDischargedPower)) \(Constants.kilowattHour)",
               background: .blue)
             .padding([.top, .leading])
             SquareWidgetView(
               title: "Charged Energy",
-              value: "\(String(format: "%.2f", viewModel.totalChargedPower)) \(Constants.energyUnit)",
+              value: "\(String(format: "%.2f", viewModel.totalChargedPower)) \(Constants.kilowattHour)",
               background: .red)
             .padding([.top, .trailing])
           }
 
-          RectangleWidgetView(values: [
+          RectangleWidgetView(title: Constants.liveData, values: [
             RectangleWidgetView.DisplayValue(
-              title: "Solar Power",
-              amount: "\(viewModel.liveDataViewModel.solarPower) \(Constants.energyUnit)"),
+              title: Constants.solarPower,
+              amount: "\(viewModel.liveDataViewModel.solarPower) \(Constants.kilowatt)"),
             RectangleWidgetView.DisplayValue(
-              title: "Quasar Power",
-              amount: "\(viewModel.liveDataViewModel.quasarPower) \(Constants.energyUnit)"),
+              title: Constants.quasarPower,
+              amount: "\(viewModel.liveDataViewModel.quasarPower) \(Constants.kilowatt)"),
             RectangleWidgetView.DisplayValue(
-              title: "Grid Power",
-              amount: "\(viewModel.liveDataViewModel.gridPower) \(Constants.energyUnit)")
+              title: Constants.gridPower,
+              amount: "\(viewModel.liveDataViewModel.gridPower) \(Constants.kilowatt)")
           ], background: .purple)
           .padding([.top, .leading, .trailing])
 
           NavigationLink(destination: DetailGraphComposer.createModule(historicData: viewModel.historicData)) {
-            RectangleWidgetView(values: [
+            RectangleWidgetView(title: Constants.totalConsumption, values: [
               RectangleWidgetView.DisplayValue(
-                title: "Solar Power",
+                title: Constants.solarPower,
                 amount: "\(viewModel.liveDataViewModel.solarPowerPercent) \(Constants.percentageString)"),
 
               RectangleWidgetView.DisplayValue(
-                title: "Quasar Power",
+                title: Constants.quasarPower,
                 amount: "\(viewModel.liveDataViewModel.quasarPowerPercent) \(Constants.percentageString)"),
 
               RectangleWidgetView.DisplayValue(
-                title: "Grid Power",
+                title: Constants.gridPower,
                 amount: "\(viewModel.liveDataViewModel.gridPowerPercent) \(Constants.percentageString)")
             ], background: .orange)
             .padding()
@@ -65,74 +68,8 @@ struct DashboardView: View {
             dismissButton: .default(Text("Aceptar")))
         }
       }
+      .background(Color.black)
     }
-  }
-}
 
-// struct DashboardView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    DashboardView()
-//  }
-// }
-
-struct SquareWidgetView: View {
-  let title: String
-  let value: String
-  let background: Color
-
-  var body: some View {
-    VStack {
-      HStack {
-        Text(title)
-          .font(.system(size: 18, weight: .medium))
-          .foregroundColor(.white)
-        Spacer()
-      }
-      .padding()
-
-      Text(value)
-        .font(.system(size: 20, weight: .bold))
-        .foregroundColor(.white)
-      Spacer()
-    }
-    .frame(maxWidth: .infinity, minHeight: 150)
-    .padding()
-    .background(background)
-    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-  }
-}
-
-struct RectangleWidgetView: View {
-  struct DisplayValue: Hashable {
-    let title: String
-    let amount: String
-  }
-
-  let values: [DisplayValue]
-  let background: Color
-
-  var body: some View {
-    VStack {
-      HStack(alignment: .top) {
-        ForEach(values, id: \.self) { value in
-          VStack {
-            Text(value.title)
-              .font(.system(size: 14, weight: .medium))
-              .foregroundColor(.white)
-
-            HStack {
-              Text(value.amount)
-                .font(.system(size: 16, weight: .bold))
-                .foregroundColor(.white)
-            }
-          }
-          .padding([.top, .leading, .bottom])
-        }
-      }
-    }
-    .frame(maxWidth: .infinity, minHeight: 150)
-    .padding()
-    .background(background)
-    .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
   }
 }
