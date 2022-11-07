@@ -31,7 +31,7 @@ struct DashboardView: View {
             .padding([.top, .trailing])
           }
 
-          RectangleWidgetView(values: [
+          RectangleWidgetView(title: Constants.liveData, values: [
             RectangleWidgetView.DisplayValue(
               title: Constants.solarPower,
               amount: "\(viewModel.liveDataViewModel.solarPower) \(Constants.kilowatt)"),
@@ -45,7 +45,7 @@ struct DashboardView: View {
           .padding([.top, .leading, .trailing])
 
           NavigationLink(destination: DetailGraphComposer.createModule(historicData: viewModel.historicData)) {
-            RectangleWidgetView(values: [
+            RectangleWidgetView(title: Constants.totalConsumption, values: [
               RectangleWidgetView.DisplayValue(
                 title: Constants.solarPower,
                 amount: "\(viewModel.liveDataViewModel.solarPowerPercent) \(Constants.percentageString)"),

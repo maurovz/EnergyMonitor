@@ -12,9 +12,11 @@ struct Constants {
   static let chargedEnergy = "Quasar Power".localized
   static let dischargedEnergy = "Discharged Energy".localized
   static let buildingPower = "Building Power".localized
+  static let liveData = "Live Data".localized
+  static let totalConsumption = "Total Consumption".localized
+
   static let power = "Power"
   static let time = "Time"
-
   static let kilowatt = "kW"
   static let kilowattHour = "kWh"
   static let percentageString = "%"

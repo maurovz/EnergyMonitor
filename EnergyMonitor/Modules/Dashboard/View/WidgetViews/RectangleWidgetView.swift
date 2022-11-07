@@ -6,11 +6,15 @@ struct RectangleWidgetView: View {
     let amount: String
   }
 
+  let title: String
   let values: [DisplayValue]
   let background: Color
 
   var body: some View {
     VStack {
+      Text(title)
+        .foregroundColor(.white)
+        .font(.system(size: 16, weight: .bold))
       HStack(alignment: .top) {
         ForEach(values, id: \.self) { value in
           VStack {
@@ -38,6 +42,7 @@ struct RectangleWidgetView: View {
 struct RectangleWidgetView_Previews: PreviewProvider {
     static var previews: some View {
       RectangleWidgetView(
+        title: Constants.liveData,
         values: [.init(title: "Title", amount: "500")],
         background: .blue)
     }
